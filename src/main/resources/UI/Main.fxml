@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="MainContainer" prefWidth="1270.0" style="-fx-background-color: white;" stylesheets="@GlobalStyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.SideBarController">
+    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="299.0" styleClass="box-outside">
+        <VBox alignment="TOP_CENTER" prefHeight="778.0" prefWidth="398.0" styleClass="border-right">
+            <AnchorPane prefHeight="113.0" prefWidth="267.0" styleClass="border-bottom">
+                <Label layoutX="21.0" layoutY="17.0" styleClass="book-logo" text="Design Pattern" />
+            </AnchorPane>
+            <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                <AnchorPane fx:id="btnHome" layoutX="27.0" layoutY="14.0" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
+                    <Label layoutX="97.0" layoutY="9.0" prefHeight="19.0" prefWidth="86.0" styleClass="default-text" text="Home" />
+                </AnchorPane>
+            </AnchorPane>
+            <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                <AnchorPane fx:id="btnBook" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="211.0" styleClass="default-pane">
+                    <Label alignment="CENTER" layoutX="1.0" layoutY="-2.0" prefHeight="38.0" prefWidth="238.0" styleClass="default-text" text="Catalog" />
+                </AnchorPane>
+            </AnchorPane>
+            <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                <AnchorPane fx:id="btnCustomer" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="211.0" styleClass="default-pane">
+                    <Label alignment="CENTER" layoutY="-2.0" prefHeight="38.0" prefWidth="238.0" styleClass="default-text" text="Creational Patterns" />
+                </AnchorPane>
+            </AnchorPane>
+         <AnchorPane prefHeight="65.0" prefWidth="175.0">
+            <children>
+               <AnchorPane fx:id="btnCustomer1" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="228.0" styleClass="default-pane">
+                  <children>
+                     <Label alignment="CENTER" layoutY="-2.0" prefHeight="38.0" prefWidth="237.0" styleClass="default-text" text="Factory Method" />
+                  </children>
+               </AnchorPane>
+            </children>
+         </AnchorPane>
+            <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                <AnchorPane fx:id="btnBill" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="211.0" styleClass="default-pane">
+                    <Label alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="38.0" prefWidth="238.0" styleClass="default-text" text="Structural Patterns" />
+                </AnchorPane>
+            </AnchorPane>
+            <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                <AnchorPane fx:id="btnOrder" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="211.0" styleClass="default-pane">
+                    <Label alignment="CENTER" layoutY="-4.0" prefHeight="38.0" prefWidth="237.0" styleClass="default-text" text="Behavioral Patterns" />
+                </AnchorPane>
+            </AnchorPane>
+<!--            <AnchorPane prefHeight="65.0" prefWidth="175.0">-->
+<!--                <AnchorPane fx:id="btnThongKe" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="211.0" styleClass="default-pane">-->
+<!--                    <Label layoutX="72.0" layoutY="8.0" styleClass="default-text" text="Báo cáo" />-->
+<!--                </AnchorPane>-->
+<!--            </AnchorPane>-->
+<!--            <AnchorPane prefHeight="65.0" prefWidth="175.0">-->
+<!--                <AnchorPane fx:id="btnSetting" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="211.0" styleClass="default-pane">-->
+<!--                    <Label layoutX="72.0" layoutY="8.0" styleClass="default-text" text="Cài đặt" />-->
+<!--                </AnchorPane>-->
+<!--            </AnchorPane>-->
+        </VBox>
+    </HBox>
+</HBox>
