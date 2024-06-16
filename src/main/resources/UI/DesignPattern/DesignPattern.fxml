@@ -18,7 +18,7 @@
       </VBox>
       <ScrollPane layoutY="82.0" prefHeight="717.0" prefWidth="950.0" style="-fx-background-color: #fff;">
          <content>
-            <VBox prefHeight="210.0" prefWidth="950.0">
+            <VBox prefHeight="210.0" prefWidth="950.0" style="-fx-background-color: #fff;">
                <children>
                   <Label prefHeight="150.0" prefWidth="377.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Intent">
                      <graphic>

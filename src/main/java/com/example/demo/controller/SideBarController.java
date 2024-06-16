@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -11,6 +12,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
+
+import java.io.IOException;
 
 public class SideBarController {
     @FXML
@@ -61,10 +64,13 @@ public class SideBarController {
         });
 
         selectedBtn = btnHome;
-        Label label = new Label();
-        label.setText("<html><b><i>This is bold and italic text</i></b></html>");
-        label.setStyle("-fx-font-size: 20px;");
-        MainContainer.getChildren().add(label);
+
+        try {
+            AnchorPane additionalView = FXMLLoader.load(getClass().getResource("/UI/DesignPattern/DesignPattern.fxml"));
+            MainContainer.getChildren().add(additionalView);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void toggleVisibility(AnchorPane... panes) {
