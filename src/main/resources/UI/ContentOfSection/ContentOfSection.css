@@ -1,0 +1,16 @@
+.button {
+    -fx-background-color: #fff; /* Màu nền */
+    -fx-text-fill: #000; /* Màu chữ */
+    -fx-font-size: 14px; /* Kích thước chữ */
+    -fx-border-radius: 1px; /* Bán kính bo tròn */
+    -fx-border-width: 1px;
+    -fx-border-color: #00000020;
+    -fx-font-weight: bold; /* Kiểu chữ */
+    -fx-pref-width: 290px;
+    -fx-pref-height: 200px;
+}
+
+.button:hover {
+    /*-fx-background-color: #0056b3; !* Màu nền khi di chuột qua *!*/
+    -fx-border-color: #e74c3c;
+}

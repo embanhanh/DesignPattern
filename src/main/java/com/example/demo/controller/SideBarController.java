@@ -61,6 +61,10 @@ public class SideBarController {
         });
 
         selectedBtn = btnHome;
+        Label label = new Label();
+        label.setText("<html><b><i>This is bold and italic text</i></b></html>");
+        label.setStyle("-fx-font-size: 20px;");
+        MainContainer.getChildren().add(label);
     }
 
     private void toggleVisibility(AnchorPane... panes) {

@@ -5,8 +5,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox fx:id="MainContainer" prefWidth="1270.0" style="-fx-background-color: white;" stylesheets="@GlobalStyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.SideBarController">
-    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="299.0" styleClass="box-outside">
+<HBox fx:id="MainContainer" prefWidth="1250.0" style="-fx-background-color: white;" stylesheets="@GlobalStyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.SideBarController">
+    <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="300.0" styleClass="box-outside">
         <VBox alignment="TOP_CENTER" prefHeight="778.0" prefWidth="398.0" styleClass="border-right">
             <AnchorPane prefHeight="113.0" prefWidth="267.0" styleClass="border-bottom">
                 <Label layoutX="21.0" layoutY="17.0" styleClass="book-logo" text="Design Pattern" />
@@ -35,7 +35,7 @@
                     <Label alignment="CENTER" layoutY="-1.0" prefHeight="38.0" prefWidth="238.0" styleClass="default-text" text="Creational Patterns" />
                 </AnchorPane>
             </AnchorPane>
-             <AnchorPane fx:id="btnFactoryMethodContainer" prefHeight="65.0" prefWidth="175.0" visible="false" managed="false">
+             <AnchorPane fx:id="btnFactoryMethodContainer" managed="false" prefHeight="65.0" prefWidth="175.0" visible="false">
                 <children>
                    <AnchorPane fx:id="btnFactoryMethod" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="228.0" styleClass="default-pane">
                       <children>

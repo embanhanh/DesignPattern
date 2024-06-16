@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@DesignPattern.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ContentOfSectionController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefWidth="950.0">
+         <children>
+            <Label prefHeight="82.0" prefWidth="950.0" style="-fx-font-size: 50px; -fx-font-weight: bold; -fx-font-family: Helvetica;" text="Factory Method" />
+         </children>
+      </VBox>
+      <ScrollPane layoutY="82.0" prefHeight="717.0" prefWidth="950.0" style="-fx-background-color: #fff;">
+         <content>
+            <VBox prefHeight="210.0" prefWidth="950.0">
+               <children>
+                  <Label prefHeight="150.0" prefWidth="377.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Intent">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Icons/intent.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <TextFlow prefHeight="0.0" prefWidth="900.0" />
+                  <ImageView fitHeight="400" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/CreationalPatterns/FactoryMethod/intent.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="40.0" prefWidth="95.0" text="Proplem">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Icons/error.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <TextFlow prefHeight="0.0" prefWidth="900.0" />
+                  <ImageView pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label text="Solution">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Icons/solution.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <Label text="Structure">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Icons/structure.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <Label text="Pseudocode">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Icons/pseudocode.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <Label text="Applicability">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Icons/applicability.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <Label text="How to implement">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Icons/implementation.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <Label text="Pros and Cons">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Icons/prosandcons.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <Label text="Relations with Other Patterns">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/Icons/structure.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
