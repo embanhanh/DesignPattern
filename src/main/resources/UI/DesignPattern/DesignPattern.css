@@ -1,0 +1,10 @@
+Text{
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-fill: #333333;
+    -fx-font-weight: 400;
+}
+
+TextFlow{
+    -fx-line-spacing: 5;
+}
