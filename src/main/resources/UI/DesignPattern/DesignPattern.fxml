@@ -3,6 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,16 +12,16 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@DesignPattern.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.DesignPatternController">
+<AnchorPane prefHeight="750.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@DesignPattern.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.DesignPatternController">
    <children>
       <VBox alignment="TOP_CENTER" prefWidth="950.0">
          <children>
             <Label prefHeight="82.0" prefWidth="950.0" style="-fx-font-size: 50px; -fx-font-weight: bold; -fx-font-family: Helvetica;" text="Factory Method" />
          </children>
       </VBox>
-      <ScrollPane layoutY="82.0" prefHeight="717.0" prefWidth="950.0" style="-fx-background-color: #fff;">
+      <ScrollPane layoutY="82.0" maxWidth="950.0" prefHeight="717.0" prefWidth="950.0" style="-fx-background-color: #fff;">
          <content>
-            <VBox maxHeight="715.0" prefHeight="210.0" prefWidth="950.0" style="-fx-background-color: #fff;">
+            <VBox maxHeight="1338.0" maxWidth="934.0" prefHeight="1332.0" prefWidth="934.0" style="-fx-background-color: #fff;">
                <children>
                   <Label prefHeight="150.0" prefWidth="377.0" style="-fx-font-weight: bold; -fx-font-size: 20;" text="Intent">
                      <graphic>
@@ -107,13 +109,47 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextFlow fx:id="TextFlowProsandCons" prefHeight="0.0" prefWidth="900.0">
+                   <TextFlow fx:id="TextFlowProsandCons" prefHeight="0.0" prefWidth="900.0">
+                       <children>
+                       </children>
+                   </TextFlow>
+                   <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Code Example">
+                       <graphic>
+                           <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                               <image>
+                                   <Image url="@../../Images/Icons/code.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                       <VBox.margin>
+                           <Insets bottom="10.0" />
+                       </VBox.margin>
+                   </Label>
+                  <AnchorPane>
                      <children>
+                        <TabPane prefHeight="218.0" prefWidth="880.0" style="-fx-background-color: #e1e1e1;" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Java">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </Tab>
+                            <Tab text="Python">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
                      </children>
-                  </TextFlow>
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+
                </children>
                <padding>
-                  <Insets left="50.0" />
+                  <Insets left="40.0" />
                </padding>
             </VBox>
          </content>

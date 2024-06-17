@@ -1,10 +1,38 @@
 Text{
     -fx-font-size: 14px;
     -fx-font-family: "Arial";
-    -fx-fill: #333333;
-    -fx-font-weight: 400;
+    /*-fx-fill: #333333;*/
+
 }
 
 TextFlow{
     -fx-line-spacing: 5;
+    -fx-max-width: 870;
 }
+
+.tab {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+}
+
+/* Hiệu ứng khi di chuột qua tab */
+.tab:hover {
+    -fx-background-color: #d0d0d0;
+}
+
+/* Đường viền và khoảng cách giữa các tab */
+.tab-pane {
+    -fx-tab-min-width: 100px;
+    -fx-tab-max-width: 100px;
+    -fx-tab-min-height: 30px;
+    -fx-tab-max-height: 30px;
+    -fx-tab-background-color: #e0e0e0;
+    -fx-tab-border-color: #bbbbbb;
+    -fx-tab-border-width: 1px;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: white;
+}
+
