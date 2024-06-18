@@ -13,7 +13,7 @@
             </AnchorPane>
          <AnchorPane prefHeight="65.0" prefWidth="175.0">
             <children>
-               <AnchorPane fx:id="tabFav" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
+               <AnchorPane fx:id="tabFav" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
                   <children>
                      <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="91.0" styleClass="default-text" text="Favorite" textAlignment="CENTER" />
                   </children>
@@ -21,13 +21,13 @@
             </children>
          </AnchorPane>
             <AnchorPane prefHeight="65.0" prefWidth="175.0">
-                <AnchorPane fx:id="btnHome" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
-                    <Label fx:id="tabHome" layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="43.0" styleClass="default-text" text="Home" textAlignment="CENTER" />
+                <AnchorPane fx:id="tabHome" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
+                    <Label  layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="43.0" styleClass="default-text" text="Home" textAlignment="CENTER" />
                 </AnchorPane>
             </AnchorPane>
          <AnchorPane prefHeight="65.0" prefWidth="175.0">
             <children>
-               <AnchorPane fx:id="tabCreational" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_CreationalPattern" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
+               <AnchorPane fx:id="tabCreational" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_CreationalPattern" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
                   <children>
                      <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="127.0" styleClass="default-text" text="Creational Patterns" />
                   </children>
@@ -36,7 +36,7 @@
          </AnchorPane>
          <AnchorPane prefHeight="65.0" prefWidth="175.0">
             <children>
-               <AnchorPane fx:id="tabStructural" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_StructuralPattern" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
+               <AnchorPane fx:id="tabStructural" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_StructuralPattern" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
                   <children>
                      <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="127.0" styleClass="default-text" text="Structural Patterns" />
                   </children>
@@ -45,7 +45,7 @@
          </AnchorPane>
          <AnchorPane prefHeight="65.0" prefWidth="175.0">
             <children>
-               <AnchorPane fx:id="tabBehavioral" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_BehavioralPattern" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
+               <AnchorPane fx:id="tabBehavioral" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_BehavioralPattern" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
                   <children>
                      <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="127.0" styleClass="default-text" text="Behavioral Patterns" />
                   </children>

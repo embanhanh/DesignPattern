@@ -16,7 +16,7 @@ public class HelloApplication extends Application {
             Scene scene = new Scene(loader.load());
             stage.setTitle("Design Pattern");
             stage.setScene(scene);
-            stage.setWidth(1250);
+            stage.setWidth(1270);
             stage.setHeight(820);
             stage.show();
         } catch (IOException e) {

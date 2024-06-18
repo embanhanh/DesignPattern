@@ -69,18 +69,6 @@
                      <children>
                      </children>
                   </TextFlow>
-<!--                  <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Pseudocode">-->
-<!--                     <graphic>-->
-<!--                        <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">-->
-<!--                           <image>-->
-<!--                              <Image url="@../../Images/Icons/pseudocode.png" />-->
-<!--                           </image>-->
-<!--                        </ImageView>-->
-<!--                     </graphic>-->
-<!--                     <VBox.margin>-->
-<!--                        <Insets bottom="10.0" />-->
-<!--                     </VBox.margin>-->
-<!--                  </Label>-->
                   <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="How to implement">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -127,36 +115,83 @@
                    </Label>
                   <AnchorPane>
                      <children>
-                        <TabPane prefHeight="218.0" prefWidth="880.0" style="-fx-background-color: #e1e1e1;" tabClosingPolicy="UNAVAILABLE">
+                        <TabPane prefHeight="400.0" prefWidth="880.0" style="-fx-background-color: #e1e1e1;" tabClosingPolicy="UNAVAILABLE">
                           <tabs>
                             <Tab text="Java">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0">
-                                       <children>
-                                          <VBox>
-                                             <children>
-                                                <TextFlow fx:id="codeJava" />
-                                             </children>
-                                          </VBox>
-                                       </children></AnchorPane>
+                                   <children>
+                                       <ScrollPane prefHeight="370.0" prefWidth="880.0">
+                                           <content>
+                                               <VBox maxHeight="400">
+                                                   <children>
+                                                       <TextFlow fx:id="codeJava" />
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="20.0" top="10.0" />
+                                                   </padding>
+                                               </VBox>
+                                           </content>
+                                       </ScrollPane>
+                                   </children>
+                                </AnchorPane>
                               </content>
                             </Tab>
                             <Tab text="Python">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TextFlow fx:id="codePython" />
+                                           <ScrollPane prefHeight="370.0" prefWidth="880.0">
+                                               <content>
+                                                   <VBox maxHeight="400">
+                                                       <children>
+                                                           <TextFlow fx:id="codePython" />
+                                                       </children>
+                                                       <padding>
+                                                           <Insets left="20.0" top="10.0" />
+                                                       </padding>
+                                                   </VBox>
+                                               </content>
+                                           </ScrollPane>
                                        </children></AnchorPane>
                               </content>
                             </Tab>
                               <Tab text="C++">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" >
+                                        <children>
+                                            <ScrollPane prefHeight="370.0" prefWidth="880.0">
+                                                <content>
+                                                    <VBox maxHeight="400">
+                                                        <children>
+                                                            <TextFlow fx:id="codeCpp" />
+                                                        </children>
+                                                        <padding>
+                                                            <Insets left="20.0" top="10.0" />
+                                                        </padding>
+                                                    </VBox>
+                                                </content>
+                                            </ScrollPane>
+                                        </children>
+                                    </AnchorPane>
                                  </content>
                               </Tab>
                               <Tab text="C#">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" >
+                                        <ScrollPane prefHeight="370.0" prefWidth="880.0">
+                                            <content>
+                                                <VBox maxHeight="400">
+                                                    <children>
+                                                        <TextFlow fx:id="codeCSharp" />
+                                                    </children>
+                                                    <padding>
+                                                        <Insets left="20.0" top="10.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </content>
+                                        </ScrollPane>
+                                    </AnchorPane>
                                  </content>
                               </Tab>
                           </tabs>

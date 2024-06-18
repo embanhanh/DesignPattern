@@ -21,8 +21,6 @@ public class SideBarController {
     @FXML
     private HBox MainContainer;
 
-    @FXML
-    private AnchorPane btnHome;
 
     @FXML
     private AnchorPane tabBehavioral;
@@ -34,7 +32,7 @@ public class SideBarController {
     private AnchorPane tabFav;
 
     @FXML
-    private Label tabHome;
+    private AnchorPane tabHome;
 
     @FXML
     private AnchorPane tabStructural;
@@ -44,7 +42,7 @@ public class SideBarController {
     @FXML
     private void initialize() {
 
-        selectedBtn = btnHome;
+        selectedBtn = tabHome;
         tabFav.getStyleClass().add("default-pane");
         tabStructural.getStyleClass().add("default-pane");
         tabBehavioral.getStyleClass().add("default-pane");
