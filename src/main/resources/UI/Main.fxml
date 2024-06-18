@@ -13,47 +13,45 @@
             </AnchorPane>
          <AnchorPane prefHeight="65.0" prefWidth="175.0">
             <children>
-               <AnchorPane fx:id="btnHome1" layoutX="27.0" layoutY="14.0" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
+               <AnchorPane fx:id="tabFav" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
                   <children>
-                     <Label layoutX="97.0" layoutY="9.0" prefHeight="19.0" prefWidth="86.0" styleClass="default-text" text="Favorite" />
+                     <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="91.0" styleClass="default-text" text="Favorite" textAlignment="CENTER" />
                   </children>
                </AnchorPane>
             </children>
          </AnchorPane>
             <AnchorPane prefHeight="65.0" prefWidth="175.0">
-                <AnchorPane fx:id="btnHome" layoutX="27.0" layoutY="14.0" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
-                    <Label layoutX="97.0" layoutY="9.0" prefHeight="19.0" prefWidth="86.0" styleClass="default-text" text="Home" />
+                <AnchorPane fx:id="btnHome" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
+                    <Label fx:id="tabHome" layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="43.0" styleClass="default-text" text="Home" textAlignment="CENTER" />
                 </AnchorPane>
             </AnchorPane>
-            <AnchorPane prefHeight="65.0" prefWidth="175.0">
-                <AnchorPane fx:id="btnCatalog" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="37.0" prefWidth="211.0" styleClass="default-pane">
-                    <Label alignment="CENTER" layoutX="1.0" layoutY="-2.0" prefHeight="38.0" prefWidth="238.0" styleClass="default-text" text="Catalog" />
-                </AnchorPane>
-            </AnchorPane>
-            <AnchorPane fx:id="btnCreationContainer" managed="false" prefHeight="65.0" prefWidth="175.0" visible="false">
-                <AnchorPane fx:id="btnCreation" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="211.0" styleClass="default-pane">
-                    <Label alignment="CENTER" layoutY="-1.0" prefHeight="38.0" prefWidth="238.0" styleClass="default-text" text="Creational Patterns" />
-                </AnchorPane>
-            </AnchorPane>
-             <AnchorPane fx:id="btnFactoryMethodContainer" managed="false" prefHeight="65.0" prefWidth="175.0" visible="false">
-                <children>
-                   <AnchorPane fx:id="btnFactoryMethod" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="228.0" styleClass="default-pane">
-                      <children>
-                         <Label alignment="CENTER" layoutY="-2.0" prefHeight="38.0" prefWidth="237.0" styleClass="default-text" text="Factory Method" />
-                      </children>
-                   </AnchorPane>
-                </children>
-             </AnchorPane>
-            <AnchorPane fx:id="btnStructureContainer" managed="false" prefHeight="65.0" prefWidth="175.0" visible="false">
-                <AnchorPane fx:id="btnStructure" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="211.0" styleClass="default-pane">
-                    <Label alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="38.0" prefWidth="238.0" styleClass="default-text" text="Structural Patterns" />
-                </AnchorPane>
-            </AnchorPane>
-            <AnchorPane fx:id="btnBehaviorContainer" managed="false" prefHeight="65.0" prefWidth="175.0" visible="false">
-                <AnchorPane fx:id="btnBehavior" layoutX="27.0" layoutY="14.0" prefHeight="37.0" prefWidth="211.0" styleClass="default-pane">
-                    <Label alignment="CENTER" layoutY="-4.0" prefHeight="38.0" prefWidth="237.0" styleClass="default-text" text="Behavioral Patterns" />
-                </AnchorPane>
-            </AnchorPane>
+         <AnchorPane prefHeight="65.0" prefWidth="175.0">
+            <children>
+               <AnchorPane fx:id="tabCreational" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_CreationalPattern" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
+                  <children>
+                     <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="127.0" styleClass="default-text" text="Creational Patterns" />
+                  </children>
+               </AnchorPane>
+            </children>
+         </AnchorPane>
+         <AnchorPane prefHeight="65.0" prefWidth="175.0">
+            <children>
+               <AnchorPane fx:id="tabStructural" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_StructuralPattern" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
+                  <children>
+                     <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="127.0" styleClass="default-text" text="Structural Patterns" />
+                  </children>
+               </AnchorPane>
+            </children>
+         </AnchorPane>
+         <AnchorPane prefHeight="65.0" prefWidth="175.0">
+            <children>
+               <AnchorPane fx:id="tabBehavioral" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_BehavioralPattern" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
+                  <children>
+                     <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="127.0" styleClass="default-text" text="Behavioral Patterns" />
+                  </children>
+               </AnchorPane>
+            </children>
+         </AnchorPane>
         </VBox>
     </HBox>
 </HBox>

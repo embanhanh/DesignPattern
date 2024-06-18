@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -14,57 +15,41 @@ import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class SideBarController {
     @FXML
     private HBox MainContainer;
 
     @FXML
-    private AnchorPane btnBehavior;
-
-    @FXML
-    private AnchorPane btnBehaviorContainer;
-
-    @FXML
-    private AnchorPane btnCatalog;
-
-    @FXML
-    private AnchorPane btnCreation;
-
-    @FXML
-    private AnchorPane btnCreationContainer;
-
-    @FXML
-    private AnchorPane btnFactoryMethod;
-
-    @FXML
-    private AnchorPane btnFactoryMethodContainer;
-
-    @FXML
     private AnchorPane btnHome;
 
     @FXML
-    private AnchorPane btnStructure;
+    private AnchorPane tabBehavioral;
 
     @FXML
-    private AnchorPane btnStructureContainer;
+    private AnchorPane tabCreational;
+
+    @FXML
+    private AnchorPane tabFav;
+
+    @FXML
+    private Label tabHome;
+
+    @FXML
+    private AnchorPane tabStructural;
 
     private AnchorPane selectedBtn;
 
     @FXML
     private void initialize() {
-        btnCatalog.setOnMouseClicked(event -> {
-            toggleVisibility(btnCreationContainer, btnBehaviorContainer, btnStructureContainer);
-            handleButtonClick(event);
-        });
-
-        btnCreation.setOnMouseClicked(event -> {
-            toggleVisibility(btnFactoryMethodContainer);
-            handleButtonClick(event);
-        });
 
         selectedBtn = btnHome;
-
+        tabFav.getStyleClass().add("default-pane");
+        tabStructural.getStyleClass().add("default-pane");
+        tabBehavioral.getStyleClass().add("default-pane");
+        tabCreational.getStyleClass().add("default-pane");
+        tabHome.getStyleClass().add("selected-pane");
         try {
             AnchorPane additionalView = FXMLLoader.load(getClass().getResource("/UI/DesignPattern/DesignPattern.fxml"));
             MainContainer.getChildren().add(additionalView);
@@ -73,21 +58,6 @@ public class SideBarController {
         }
     }
 
-    private void toggleVisibility(AnchorPane... panes) {
-        for (AnchorPane pane : panes) {
-            if (pane.equals(btnCreationContainer)) {
-                setVisible(btnFactoryMethodContainer);
-            }
-            if (pane.equals(btnBehaviorContainer)) {}
-            if (pane.equals(btnStructureContainer)) {}
-            boolean isVisible = pane.isVisible();
-            pane.setVisible(!pane.isVisible());
-            pane.setManaged(!pane.isManaged());
-            if (!isVisible) {
-                applySlideInAnimation(pane);
-            }
-        }
-    }
 
     private void setVisible(AnchorPane... panes) {
         for (AnchorPane pane : panes) {
@@ -102,6 +72,66 @@ public class SideBarController {
         selectedBtn.getStyleClass().removeAll("selected-pane");
         selectedBtn.getStyleClass().add("default-pane");
 
+        selectedBtn = clickedButton;
+        selectedBtn.getStyleClass().removeAll("default-pane");
+        selectedBtn.getStyleClass().add("selected-pane");
+    }
+
+    public void handleButtonClick_CreationalPattern(MouseEvent event) {
+        System.out.println("Clicked creational pattern");
+        AnchorPane clickedButton = (AnchorPane) event.getSource();
+        selectedBtn.getStyleClass().removeAll("selected-pane");
+        selectedBtn.getStyleClass().add("default-pane");
+        try {
+//            AnchorPane additionalView = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/UI/ContentOfSection/CreationalPattern.fxml")));
+//            MainContainer.getChildren().removeLast();
+//            MainContainer.getChildren().add(additionalView);
+            Parent newContent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/UI/ContentOfSection/CreationalPattern.fxml")));
+            MainContainer.getChildren().removeLast();
+            MainContainer.getChildren().add(newContent);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        selectedBtn = clickedButton;
+        selectedBtn.getStyleClass().removeAll("default-pane");
+        selectedBtn.getStyleClass().add("selected-pane");
+    }
+
+    public void handleButtonClick_StructuralPattern(MouseEvent event) {
+        System.out.println("Clicked structural pattern");
+        AnchorPane clickedButton = (AnchorPane) event.getSource();
+        selectedBtn.getStyleClass().removeAll("selected-pane");
+        selectedBtn.getStyleClass().add("default-pane");
+        try {
+//            AnchorPane additionalView = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/UI/ContentOfSection/StructuralPattern.fxml")));
+//            MainContainer.getChildren().removeLast();
+//            MainContainer.getChildren().add(additionalView);
+            Parent newContent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/UI/ContentOfSection/StructuralPattern.fxml")));
+            MainContainer.getChildren().removeLast();
+            MainContainer.getChildren().add(newContent);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        selectedBtn = clickedButton;
+        selectedBtn.getStyleClass().removeAll("default-pane");
+        selectedBtn.getStyleClass().add("selected-pane");
+    }
+
+    public void handleButtonClick_BehavioralPattern(MouseEvent event) {
+        System.out.println("Clicked behavioral pattern");
+        AnchorPane clickedButton = (AnchorPane) event.getSource();
+        selectedBtn.getStyleClass().removeAll("selected-pane");
+        selectedBtn.getStyleClass().add("default-pane");
+        try {
+//            AnchorPane additionalView = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/UI/ContentOfSection/BehavioralPattern.fxml")));
+//            MainContainer.getChildren().removeLast();
+//            MainContainer.getChildren().add(additionalView);
+            Parent newContent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/UI/ContentOfSection/BehavioralPattern.fxml")));
+            MainContainer.getChildren().removeLast();
+            MainContainer.getChildren().add(newContent);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         selectedBtn = clickedButton;
         selectedBtn.getStyleClass().removeAll("default-pane");
         selectedBtn.getStyleClass().add("selected-pane");

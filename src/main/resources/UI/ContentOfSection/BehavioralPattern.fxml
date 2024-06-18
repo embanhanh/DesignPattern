@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@ContentOfSection.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ContentOfSection.BehavioralPattern">
+    <children>
+        <VBox alignment="TOP_CENTER" prefWidth="950.0">
+            <children>
+                <Label prefHeight="137.0" prefWidth="950.0" style="-fx-font-size: 50px; -fx-font-weight: bold;" text="Behavioral Design Patterns" />
+                <Label maxWidth="-Infinity" prefWidth="950.0" style="-fx-font-size: 14px;" text="Behavioral design patterns are concerned with algorithms and the assignment of responsibilities between objects." wrapText="true" />
+            </children>
+        </VBox>
+      <ScrollPane layoutY="183.0" prefHeight="620.0" style="-fx-background-color: #fff;">
+         <content>
+             <VBox>
+                 <HBox prefWidth="951.0" spacing="20.0">
+                     <!--                    <Region HBox.hgrow="ALWAYS" />-->
+                     <Button fx:id="btnChainOfResponsibility" contentDisplay="TOP">
+                         <graphic>
+                             <VBox alignment="TOP_LEFT">
+                                 <children>
+                                     <HBox>
+                                         <children>
+                                             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                                 <image>
+                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                 </image>
+                                             </ImageView>
+                                             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Chain of Responsibility" textAlignment="CENTER" />
+                                         </children>
+                                     </HBox>
+                                     <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain." wrapText="true" />
+                                 </children>
+                             </VBox>
+                         </graphic>
+                     </Button>
+                     <!--                    <Region HBox.hgrow="ALWAYS" />-->
+                     <Button fx:id="btnCommand" contentDisplay="TOP">
+                         <graphic>
+                             <VBox alignment="TOP_LEFT">
+                                 <children>
+                                     <HBox>
+                                         <children>
+                                             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                                 <image>
+                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                 </image>
+                                             </ImageView>
+                                             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Command" textAlignment="CENTER" />
+                                         </children>
+                                     </HBox>
+                                     <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Turns a request into a stand-alone object that contains all information about the request. This transformation lets you pass requests as a method arguments, delay or queue a request's execution, and support undoable operations." wrapText="true" />
+                                 </children>
+                             </VBox>
+                         </graphic>
+                     </Button>
+                     <Button fx:id="btnIterator" contentDisplay="TOP">
+                         <graphic>
+                             <VBox alignment="TOP_LEFT">
+                                 <HBox>
+                                     <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                         <image>
+                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                         </image>
+                                     </ImageView>
+                                     <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Iterator" textAlignment="CENTER" />
+                                 </HBox>
+                                 <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets you traverse elements of a collection without exposing its underlying representation (list, stack, tree, etc.)." wrapText="true" />
+                             </VBox>
+                         </graphic>
+                     </Button>
+                     <padding>
+                         <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                 </HBox>
+                 <HBox prefWidth="951.0" spacing="20.0">
+                     <!--                    <Region HBox.hgrow="ALWAYS" />-->
+                     <Button fx:id="btnMediator" contentDisplay="TOP">
+                         <graphic>
+                             <VBox alignment="TOP_LEFT">
+                                 <children>
+                                     <HBox>
+                                         <children>
+                                             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                                 <image>
+                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                 </image>
+                                             </ImageView>
+                                             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Mediator" textAlignment="CENTER" />
+                                         </children>
+                                     </HBox>
+                                     <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets you reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object." wrapText="true" />
+                                 </children>
+                             </VBox>
+                         </graphic>
+                     </Button>
+                     <Button fx:id="btnMemento" contentDisplay="TOP">
+                         <graphic>
+                             <VBox alignment="TOP_LEFT">
+                                 <HBox>
+                                     <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                         <image>
+                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                         </image>
+                                     </ImageView>
+                                     <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Memento" textAlignment="CENTER" />
+                                 </HBox>
+                                 <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets you save and restore the previous state of an object without revealing the details of its implementation." wrapText="true" />
+                             </VBox>
+                         </graphic>
+                     </Button>
+                  <Button fx:id="btnObserver" contentDisplay="TOP">
+                     <graphic>
+                        <VBox alignment="TOP_LEFT">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Observer" textAlignment="CENTER" />
+                                 </children>
+                              </HBox>
+                              <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they're observing." wrapText="true" />
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                     <padding>
+                         <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                 </HBox>
+               <HBox prefWidth="951.0" spacing="20.0">
+                  <padding>
+                     <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+                  <children>
+                     <Button fx:id="btnState" contentDisplay="TOP">
+                        <graphic>
+                           <VBox alignment="TOP_LEFT">
+                              <children>
+                                 <HBox>
+                                    <children>
+                                       <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="State" textAlignment="CENTER" />
+                                    </children>
+                                 </HBox>
+                                 <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets an object alter its behavior when its internal state changes. It appears as if the object changed its class." wrapText="true" />
+                              </children>
+                           </VBox>
+                        </graphic>
+                     </Button>
+                     <Button fx:id="btnStrategy" contentDisplay="TOP">
+                        <graphic>
+                           <VBox alignment="TOP_LEFT">
+                              <children>
+                                 <HBox>
+                                    <children>
+                                       <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Strategy" textAlignment="CENTER" />
+                                    </children>
+                                 </HBox>
+                                 <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable." wrapText="true" />
+                              </children>
+                           </VBox>
+                        </graphic>
+                     </Button>
+                     <Button fx:id="btnTemplateMethod" contentDisplay="TOP">
+                        <graphic>
+                           <VBox alignment="TOP_LEFT">
+                              <children>
+                                 <HBox>
+                                    <children>
+                                       <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Template Method" textAlignment="CENTER" />
+                                    </children>
+                                 </HBox>
+                                 <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure." wrapText="true" />
+                              </children>
+                           </VBox>
+                        </graphic>
+                     </Button>
+                  </children>
+               </HBox>
+               <HBox prefWidth="951.0" spacing="20.0">
+                  <padding>
+                     <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                  </padding>
+                  <children>
+                     <Button fx:id="btnVisitor" contentDisplay="TOP">
+                        <graphic>
+                           <VBox alignment="TOP_LEFT">
+                              <children>
+                                 <HBox>
+                                    <children>
+                                       <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                          </image>
+                                       </ImageView>
+                                       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Visitor" textAlignment="CENTER" />
+                                    </children>
+                                 </HBox>
+                                 <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets you separate algorithms from the objects on which they operate." wrapText="true" />
+                              </children>
+                           </VBox>
+                        </graphic>
+                     </Button>
+                  </children>
+               </HBox>
+                 <HBox prefWidth="951.0" spacing="20.0" />
+                 <HBox prefWidth="951.0" spacing="20.0" />
+             </VBox>
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

@@ -16,7 +16,7 @@
    <children>
       <VBox alignment="TOP_CENTER" prefWidth="950.0">
          <children>
-            <Label prefHeight="82.0" prefWidth="950.0" style="-fx-font-size: 50px; -fx-font-weight: bold; -fx-font-family: Helvetica;" text="Factory Method" />
+            <Label fx:id="labelPattern" prefHeight="82.0" prefWidth="950.0" style="-fx-font-size: 50px; -fx-font-weight: bold; -fx-font-family: Helvetica;" text="Factory Method" />
          </children>
       </VBox>
       <ScrollPane layoutY="82.0" maxWidth="950.0" prefHeight="717.0" prefWidth="950.0" style="-fx-background-color: #fff;">
@@ -37,10 +37,10 @@
                   </Label>
                   <TextFlow prefHeight="0.0" prefWidth="900.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created." />
+                        <Text fx:id="labelIntent" strokeType="OUTSIDE" strokeWidth="0.0" text="Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created." />
                      </children>
                   </TextFlow>
-                  <ImageView fitHeight="400" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgIntent" fitHeight="400" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../Images/CreationalPatterns/FactoryMethod/intent.png" />
                      </image>
@@ -60,7 +60,7 @@
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Label>
-                  <ImageView fitHeight="400.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgStructure" fitHeight="400.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../Images/CreationalPatterns/FactoryMethod/structure.png" />
                      </image>
@@ -131,14 +131,34 @@
                           <tabs>
                             <Tab text="Java">
                               <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane minHeight="0.0" minWidth="0.0">
+                                       <children>
+                                          <VBox>
+                                             <children>
+                                                <TextFlow fx:id="codeJava" />
+                                             </children>
+                                          </VBox>
+                                       </children></AnchorPane>
                               </content>
                             </Tab>
                             <Tab text="Python">
                               <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextFlow fx:id="codePython" />
+                                       </children></AnchorPane>
                               </content>
                             </Tab>
+                              <Tab text="C++">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                              <Tab text="C#">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
                           </tabs>
                         </TabPane>
                      </children>
