@@ -5,10 +5,12 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
@@ -69,6 +71,18 @@
                      <children>
                      </children>
                   </TextFlow>
+<!--                  <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="Pseudocode">-->
+<!--                     <graphic>-->
+<!--                        <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                           <image>-->
+<!--                              <Image url="@../../Images/Icons/pseudocode.png" />-->
+<!--                           </image>-->
+<!--                        </ImageView>-->
+<!--                     </graphic>-->
+<!--                     <VBox.margin>-->
+<!--                        <Insets bottom="10.0" />-->
+<!--                     </VBox.margin>-->
+<!--                  </Label>-->
                   <Label style="-fx-font-weight: bold; -fx-font-size: 20;" text="How to implement">
                      <graphic>
                         <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -115,83 +129,71 @@
                    </Label>
                   <AnchorPane>
                      <children>
-                        <TabPane prefHeight="400.0" prefWidth="880.0" style="-fx-background-color: #e1e1e1;" tabClosingPolicy="UNAVAILABLE">
+                        <TabPane prefHeight="218.0" prefWidth="880.0" style="-fx-background-color: #e1e1e1;" tabClosingPolicy="UNAVAILABLE">
                           <tabs>
-                            <Tab text="Java">
-                              <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0">
-                                   <children>
-                                       <ScrollPane prefHeight="370.0" prefWidth="880.0">
-                                           <content>
-                                               <VBox maxHeight="400">
-                                                   <children>
-                                                       <TextFlow fx:id="codeJava" />
-                                                   </children>
-                                                   <padding>
-                                                      <Insets left="20.0" top="10.0" />
-                                                   </padding>
-                                               </VBox>
-                                           </content>
-                                       </ScrollPane>
-                                   </children>
-                                </AnchorPane>
-                              </content>
-                            </Tab>
+                              <Tab text="Java">
+                                  <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0">
+                                          <children>
+                                              <VBox fx:id="vboxJavaCode" fillWidth="true" prefWidth="880.0">
+                                                  <children>
+                                                <TextArea fx:id="codeJava" editable="false">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </TextArea>
+                                                  </children>
+                                              </VBox>
+                                          </children>
+                                      </AnchorPane>
+                                  </content>
+                              </Tab>
                             <Tab text="Python">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                           <ScrollPane prefHeight="370.0" prefWidth="880.0">
-                                               <content>
-                                                   <VBox maxHeight="400">
-                                                       <children>
-                                                           <TextFlow fx:id="codePython" />
-                                                       </children>
-                                                       <padding>
-                                                           <Insets left="20.0" top="10.0" />
-                                                       </padding>
-                                                   </VBox>
-                                               </content>
-                                           </ScrollPane>
+                                          <VBox fx:id="vboxJavaCode1" fillWidth="true" prefWidth="880.0">
+                                             <children>
+                                                <TextArea fx:id="codePython" editable="false">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </TextArea>
+                                             </children>
+                                          </VBox>
                                        </children></AnchorPane>
                               </content>
                             </Tab>
                               <Tab text="C++">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" >
-                                        <children>
-                                            <ScrollPane prefHeight="370.0" prefWidth="880.0">
-                                                <content>
-                                                    <VBox maxHeight="400">
-                                                        <children>
-                                                            <TextFlow fx:id="codeCpp" />
-                                                        </children>
-                                                        <padding>
-                                                            <Insets left="20.0" top="10.0" />
-                                                        </padding>
-                                                    </VBox>
-                                                </content>
-                                            </ScrollPane>
-                                        </children>
-                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="vboxJavaCode11" fillWidth="true" prefWidth="880.0">
+                                             <children>
+                                                <TextArea fx:id="codeCPP" editable="false">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </TextArea>
+                                             </children>
+                                          </VBox>
+                                       </children></AnchorPane>
                                  </content>
                               </Tab>
                               <Tab text="C#">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" >
-                                        <ScrollPane prefHeight="370.0" prefWidth="880.0">
-                                            <content>
-                                                <VBox maxHeight="400">
-                                                    <children>
-                                                        <TextFlow fx:id="codeCSharp" />
-                                                    </children>
-                                                    <padding>
-                                                        <Insets left="20.0" top="10.0" />
-                                                    </padding>
-                                                </VBox>
-                                            </content>
-                                        </ScrollPane>
-                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="vboxJavaCode111" fillWidth="true" prefWidth="880.0">
+                                             <children>
+                                                <TextArea fx:id="codeCS" editable="false">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </TextArea>
+                                             </children>
+                                          </VBox>
+                                       </children></AnchorPane>
                                  </content>
                               </Tab>
                           </tabs>

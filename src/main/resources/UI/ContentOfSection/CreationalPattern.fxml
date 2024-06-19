@@ -23,7 +23,7 @@
              <VBox>
                  <HBox prefWidth="951.0" spacing="20.0">
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnFactoryMethod" contentDisplay="TOP">
+                     <Button fx:id="btnFactoryMethod" contentDisplay="TOP" onAction="#btnFactoryMethodOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -51,7 +51,7 @@
                                          <children>
                                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                                  <image>
-                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                     <Image url="@../../Images/CreationalPatterns/abstract-factory-mini.png" />
                                                  </image>
                                              </ImageView>
                                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Abstract Factory" textAlignment="CENTER" />
@@ -62,13 +62,13 @@
                              </VBox>
                          </graphic>
                      </Button>
-                     <Button fx:id="btnBuilder" contentDisplay="TOP">
+                     <Button fx:id="btnBuilder" contentDisplay="TOP" onAction="#btnBuilderOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <HBox>
                                      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                          <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/CreationalPatterns/builder-mini.png" />
                                          </image>
                                      </ImageView>
                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Builder" textAlignment="CENTER" />
@@ -83,7 +83,7 @@
                  </HBox>
                  <HBox prefWidth="951.0" spacing="20.0">
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnPrototype" contentDisplay="TOP">
+                     <Button fx:id="btnPrototype" contentDisplay="TOP" onAction="#btnPrototypeOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -91,7 +91,7 @@
                                          <children>
                                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                                  <image>
-                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                     <Image url="@../../Images/CreationalPatterns/prototype-mini.png" />
                                                  </image>
                                              </ImageView>
                                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Prototype" textAlignment="CENTER" />
@@ -102,13 +102,13 @@
                              </VBox>
                          </graphic>
                      </Button>
-                     <Button fx:id="btnSingleton" contentDisplay="TOP">
+                     <Button fx:id="btnSingleton" contentDisplay="TOP" onAction="#btnSingletonOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <HBox>
                                      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                          <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/CreationalPatterns/singleton-mini.png" />
                                          </image>
                                      </ImageView>
                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Singleton" textAlignment="CENTER" />
