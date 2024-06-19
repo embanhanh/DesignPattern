@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@ContentOfSection.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ContentOfSection.BehavioralPattern">
+<AnchorPane fx:id="MainContainer" prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@ContentOfSection.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ContentOfSection.BehavioralPattern">
     <children>
         <VBox alignment="TOP_CENTER" prefWidth="950.0">
             <children>
@@ -23,7 +23,7 @@
              <VBox>
                  <HBox prefWidth="951.0" spacing="20.0">
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnChainOfResponsibility" contentDisplay="TOP">
+                     <Button fx:id="btnChainOfResponsibility" contentDisplay="TOP" onAction="#btnChainOfResponsibilityOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -31,7 +31,7 @@
                                          <children>
                                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                                  <image>
-                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                     <Image url="@../../Images/BehavioralPatterns/chain-of-responsibility-mini.png" />
                                                  </image>
                                              </ImageView>
                                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Chain of Responsibility" textAlignment="CENTER" />
@@ -43,7 +43,7 @@
                          </graphic>
                      </Button>
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnCommand" contentDisplay="TOP">
+                     <Button fx:id="btnCommand" contentDisplay="TOP" onAction="#btnCommandOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -51,7 +51,7 @@
                                          <children>
                                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                                  <image>
-                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                     <Image url="@../../Images/BehavioralPatterns/command-mini.png" />
                                                  </image>
                                              </ImageView>
                                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Command" textAlignment="CENTER" />
@@ -62,13 +62,13 @@
                              </VBox>
                          </graphic>
                      </Button>
-                     <Button fx:id="btnIterator" contentDisplay="TOP">
+                     <Button fx:id="btnIterator" contentDisplay="TOP" onAction="#btnIteratorOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <HBox>
                                      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                          <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/BehavioralPatterns/iterator-mini.png" />
                                          </image>
                                      </ImageView>
                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Iterator" textAlignment="CENTER" />
@@ -83,7 +83,7 @@
                  </HBox>
                  <HBox prefWidth="951.0" spacing="20.0">
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnMediator" contentDisplay="TOP">
+                     <Button fx:id="btnMediator" contentDisplay="TOP" onAction="#btnMediatorOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -91,7 +91,7 @@
                                          <children>
                                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                                  <image>
-                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                     <Image url="@../../Images/BehavioralPatterns/mediator-mini.png" />
                                                  </image>
                                              </ImageView>
                                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Mediator" textAlignment="CENTER" />
@@ -102,13 +102,13 @@
                              </VBox>
                          </graphic>
                      </Button>
-                     <Button fx:id="btnMemento" contentDisplay="TOP">
+                     <Button fx:id="btnMemento" contentDisplay="TOP" onAction="#btnMementoOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <HBox>
                                      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                          <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/BehavioralPatterns/memento-mini.png" />
                                          </image>
                                      </ImageView>
                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Memento" textAlignment="CENTER" />
@@ -117,7 +117,7 @@
                              </VBox>
                          </graphic>
                      </Button>
-                  <Button fx:id="btnObserver" contentDisplay="TOP">
+                  <Button fx:id="btnObserver" contentDisplay="TOP" onAction="#btnObserverOnAction">
                      <graphic>
                         <VBox alignment="TOP_LEFT">
                            <children>
@@ -125,7 +125,7 @@
                                  <children>
                                     <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                          <Image url="@../../Images/BehavioralPatterns/observer-mini.png" />
                                        </image>
                                     </ImageView>
                                     <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Observer" textAlignment="CENTER" />
@@ -145,7 +145,7 @@
                      <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
                   </padding>
                   <children>
-                     <Button fx:id="btnState" contentDisplay="TOP">
+                     <Button fx:id="btnState" contentDisplay="TOP" onAction="#btnStateOnAction">
                         <graphic>
                            <VBox alignment="TOP_LEFT">
                               <children>
@@ -153,7 +153,7 @@
                                     <children>
                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/BehavioralPatterns/state-mini.png" />
                                           </image>
                                        </ImageView>
                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="State" textAlignment="CENTER" />
@@ -164,7 +164,7 @@
                            </VBox>
                         </graphic>
                      </Button>
-                     <Button fx:id="btnStrategy" contentDisplay="TOP">
+                     <Button fx:id="btnStrategy" contentDisplay="TOP" onAction="#btnStrategyOnAction">
                         <graphic>
                            <VBox alignment="TOP_LEFT">
                               <children>
@@ -172,7 +172,7 @@
                                     <children>
                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/BehavioralPatterns/strategy-mini.png" />
                                           </image>
                                        </ImageView>
                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Strategy" textAlignment="CENTER" />
@@ -183,7 +183,7 @@
                            </VBox>
                         </graphic>
                      </Button>
-                     <Button fx:id="btnTemplateMethod" contentDisplay="TOP">
+                     <Button fx:id="btnTemplateMethod" contentDisplay="TOP" onAction="#btnTemplateMethodOnAction">
                         <graphic>
                            <VBox alignment="TOP_LEFT">
                               <children>
@@ -191,7 +191,7 @@
                                     <children>
                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/BehavioralPatterns/template-method-mini.png" />
                                           </image>
                                        </ImageView>
                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Template Method" textAlignment="CENTER" />
@@ -209,7 +209,7 @@
                      <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
                   </padding>
                   <children>
-                     <Button fx:id="btnVisitor" contentDisplay="TOP">
+                     <Button fx:id="btnVisitor" contentDisplay="TOP" onAction="#btnVisitorOnAction">
                         <graphic>
                            <VBox alignment="TOP_LEFT">
                               <children>
@@ -217,7 +217,7 @@
                                     <children>
                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/BehavioralPatterns/visitor-mini.png" />
                                           </image>
                                        </ImageView>
                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Visitor" textAlignment="CENTER" />
