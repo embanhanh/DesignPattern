@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@ContentOfSection.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ContentOfSection.StructuralPattern">
+<AnchorPane fx:id="MainContainer" prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@ContentOfSection.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ContentOfSection.StructuralPattern">
     <children>
         <VBox alignment="TOP_CENTER" prefWidth="950.0">
             <children>
@@ -23,7 +23,7 @@
              <VBox>
                  <HBox prefWidth="951.0" spacing="20.0">
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnAdapter" contentDisplay="TOP">
+                     <Button fx:id="btnAdapter" contentDisplay="TOP" onAction="#btnAdapterOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -31,7 +31,7 @@
                                          <children>
                                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                                  <image>
-                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                     <Image url="@../../Images/StructuralPatterns/adapter-mini.png" />
                                                  </image>
                                              </ImageView>
                                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Adapter" textAlignment="CENTER" />
@@ -43,7 +43,7 @@
                          </graphic>
                      </Button>
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnBidge" contentDisplay="TOP">
+                     <Button fx:id="btnBidge" contentDisplay="TOP" onAction="#btnBridgeOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -51,7 +51,7 @@
                                          <children>
                                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                                  <image>
-                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                     <Image url="@../../Images/StructuralPatterns/bridge-mini.png" />
                                                  </image>
                                              </ImageView>
                                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Bridge" textAlignment="CENTER" />
@@ -62,13 +62,13 @@
                              </VBox>
                          </graphic>
                      </Button>
-                     <Button fx:id="btnComposite" contentDisplay="TOP">
+                     <Button fx:id="btnComposite" contentDisplay="TOP" onAction="#btnCompositeOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <HBox>
                                      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                          <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/StructuralPatterns/composite-mini.png" />
                                          </image>
                                      </ImageView>
                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Composite" textAlignment="CENTER" />
@@ -83,7 +83,7 @@
                  </HBox>
                  <HBox prefWidth="951.0" spacing="20.0">
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnDecorator" contentDisplay="TOP">
+                     <Button fx:id="btnDecorator" contentDisplay="TOP" onAction="#btnDecoratorOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -91,7 +91,7 @@
                                          <children>
                                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                                  <image>
-                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                     <Image url="@../../Images/StructuralPatterns/decorator-mini.png" />
                                                  </image>
                                              </ImageView>
                                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Decorator" textAlignment="CENTER" />
@@ -102,13 +102,13 @@
                              </VBox>
                          </graphic>
                      </Button>
-                     <Button fx:id="btnFacade" contentDisplay="TOP">
+                     <Button fx:id="btnFacade" contentDisplay="TOP" onAction="#btnFacadeOnAction">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <HBox>
                                      <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                          <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/StructuralPatterns/facade-mini.png" />
                                          </image>
                                      </ImageView>
                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Facade" textAlignment="CENTER" />
@@ -117,7 +117,7 @@
                              </VBox>
                          </graphic>
                      </Button>
-                  <Button fx:id="btnFlyweight" contentDisplay="TOP">
+                  <Button fx:id="btnFlyweight" contentDisplay="TOP" onAction="#btnFlyweightOnAction">
                      <graphic>
                         <VBox alignment="TOP_LEFT">
                            <children>
@@ -125,7 +125,7 @@
                                  <children>
                                     <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                          <Image url="@../../Images/StructuralPatterns/flyweight-mini.png" />
                                        </image>
                                     </ImageView>
                                     <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Flyweight" textAlignment="CENTER" />
@@ -145,7 +145,7 @@
                      <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
                   </padding>
                   <children>
-                     <Button fx:id="btnProxy" contentDisplay="TOP">
+                     <Button fx:id="btnProxy" contentDisplay="TOP" onAction="#btnProxyOnAction">
                         <graphic>
                            <VBox alignment="TOP_LEFT">
                               <children>
@@ -153,7 +153,7 @@
                                     <children>
                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                           <image>
-                                             <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                             <Image url="@../../Images/StructuralPatterns/proxy-mini.png" />
                                           </image>
                                        </ImageView>
                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Proxy" textAlignment="CENTER" />
