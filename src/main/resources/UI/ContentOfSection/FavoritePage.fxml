@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="MainContainer" prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@ContentOfSection.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ContentOfSection.CreationalPattern">
+    <children>
+        <VBox alignment="TOP_CENTER" prefWidth="950.0">
+            <children>
+                <Label prefHeight="137.0" prefWidth="950.0" style="-fx-font-size: 50px; -fx-font-weight: bold;" text="Creational Design Patterns" />
+                <Label maxWidth="-Infinity" prefWidth="950.0" style="-fx-font-size: 14px;" text="Creational design patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code. " wrapText="true" />
+            </children>
+        </VBox>
+      <ScrollPane layoutY="183.0" prefHeight="620.0" style="-fx-background-color: #fff;">
+         <content>
+             <VBox fx:id="VBox1">
+                 <HBox fx:id="HBox1" prefWidth="951.0" spacing="20.0">
+                     <!--                    <Region HBox.hgrow="ALWAYS" />-->
+                     <Button fx:id="btnFactoryMethod" contentDisplay="TOP" onAction="#btnFactoryMethodOnAction">
+                         <graphic>
+                             <VBox alignment="TOP_LEFT">
+                                 <children>
+                                     <HBox>
+                                         <children>
+                                             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                                 <image>
+                                                     <Image url="@../../Images/CreationalPatterns/factory-method-mini.png" />
+                                                 </image>
+                                             </ImageView>
+                                             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Factory Method" textAlignment="CENTER" />
+                                         </children>
+                                     </HBox>
+                                     <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created." wrapText="true" />
+                                 </children>
+                             </VBox>
+                         </graphic>
+                     </Button>
+                     <!--                    <Region HBox.hgrow="ALWAYS" />-->
+                     <Button fx:id="btnAbstractFactory" contentDisplay="TOP" onAction="#btnAbstractFactoryOnAction">
+                         <graphic>
+                             <VBox alignment="TOP_LEFT">
+                                 <children>
+                                     <HBox>
+                                         <children>
+                                             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                                 <image>
+                                                     <Image url="@../../Images/CreationalPatterns/abstract-factory-mini.png" />
+                                                 </image>
+                                             </ImageView>
+                                             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Abstract Factory" textAlignment="CENTER" />
+                                         </children>
+                                     </HBox>
+                                     <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets you produce families of related objects without specifying their concrete classes." wrapText="true" />
+                                 </children>
+                             </VBox>
+                         </graphic>
+                     </Button>
+                     <Button fx:id="btnBuilder" contentDisplay="TOP" onAction="#btnBuilderOnAction">
+                         <graphic>
+                             <VBox alignment="TOP_LEFT">
+                                 <HBox>
+                                     <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                         <image>
+                                             <Image url="@../../Images/CreationalPatterns/builder-mini.png" />
+                                         </image>
+                                     </ImageView>
+                                     <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Builder" textAlignment="CENTER" />
+                                 </HBox>
+                                 <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets you construct complex objects step by step. The pattern allows you to produce different types and representations of an object using the same construction code." wrapText="true" />
+                             </VBox>
+                         </graphic>
+                     </Button>
+                     <padding>
+                         <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                 </HBox>
+                 <HBox prefWidth="951.0" spacing="20.0">
+                     <!--                    <Region HBox.hgrow="ALWAYS" />-->
+                     <Button fx:id="btnPrototype" contentDisplay="TOP" onAction="#btnPrototypeOnAction">
+                         <graphic>
+                             <VBox alignment="TOP_LEFT">
+                                 <children>
+                                     <HBox>
+                                         <children>
+                                             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                                 <image>
+                                                     <Image url="@../../Images/CreationalPatterns/prototype-mini.png" />
+                                                 </image>
+                                             </ImageView>
+                                             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Prototype" textAlignment="CENTER" />
+                                         </children>
+                                     </HBox>
+                                     <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Lets you copy existing objects without making your code dependent on their classes." wrapText="true" />
+                                 </children>
+                             </VBox>
+                         </graphic>
+                     </Button>
+                     <Button fx:id="btnSingleton" contentDisplay="TOP" onAction="#btnSingletonOnAction">
+                         <graphic>
+                             <VBox alignment="TOP_LEFT">
+                                 <HBox>
+                                     <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                         <image>
+                                             <Image url="@../../Images/CreationalPatterns/singleton-mini.png" />
+                                         </image>
+                                     </ImageView>
+                                     <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="71.0" prefWidth="154.0" style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Singleton" textAlignment="CENTER" />
+                                 </HBox>
+                                 <Label maxWidth="254.0" prefHeight="117.0" prefWidth="254.0" style="-fx-font-weight: 400;" text="Creational design patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code." wrapText="true" />
+                             </VBox>
+                         </graphic>
+                     </Button>
+                     <padding>
+                         <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                 </HBox>
+                 <HBox prefWidth="951.0" spacing="20.0" />
+                 <HBox prefWidth="951.0" spacing="20.0" />
+             </VBox>
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>
