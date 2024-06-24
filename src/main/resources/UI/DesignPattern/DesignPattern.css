@@ -36,3 +36,14 @@ TextFlow{
     -fx-background-color: white;
 }
 
+.content_container Label{
+    -fx-text-fill: #19abe3;
+}
+
+.title{
+    -fx-alignment: center;
+    -fx-text-fill: #024486;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: black;
+}
+

@@ -48,9 +48,29 @@ public class BehavioralPattern implements Initializable {
     @FXML
     private Button btnVisitor;
 
+    private static final String[] BUTTON_STYLES = {
+            "button1", "button2", "button3", "button4", "button5"
+    };
+
+    private int currentStyleIndex = 0;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        applyRandomStyles(btnChainOfResponsibility);
+        applyRandomStyles(btnCommand);
+        applyRandomStyles(btnIterator);
+        applyRandomStyles(btnMediator);
+        applyRandomStyles(btnMemento);
+        applyRandomStyles(btnObserver);
+        applyRandomStyles(btnState);
+        applyRandomStyles(btnStrategy);
+        applyRandomStyles(btnTemplateMethod);
+        applyRandomStyles(btnVisitor);
+    }
 
+    private void applyRandomStyles(Button button) {
+        button.getStyleClass().add(BUTTON_STYLES[currentStyleIndex]);
+        currentStyleIndex = (currentStyleIndex + 1) % BUTTON_STYLES.length;
     }
 
     @FXML

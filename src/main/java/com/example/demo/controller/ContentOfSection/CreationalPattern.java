@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import static com.example.demo.CodeExample.CodeExampleCreationalPattern.*;
@@ -36,9 +37,24 @@ public class CreationalPattern implements Initializable {
     @FXML
     private Button btnSingleton;
 
+    private static final String[] BUTTON_STYLES = {
+            "button1", "button2", "button3", "button4", "button5"
+    };
+
+    private int currentStyleIndex = 0;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        applyRandomStyles(btnFactoryMethod);
+        applyRandomStyles(btnAbstractFactory);
+        applyRandomStyles(btnBuilder);
+        applyRandomStyles(btnPrototype);
+        applyRandomStyles(btnSingleton);
+    }
 
+    private void applyRandomStyles(Button button) {
+        button.getStyleClass().add(BUTTON_STYLES[currentStyleIndex]);
+        currentStyleIndex = (currentStyleIndex + 1) % BUTTON_STYLES.length;
     }
 
     @FXML
@@ -97,7 +113,7 @@ public class CreationalPattern implements Initializable {
             String textCodeJava = getCodeJavaByNameCreationalPattern("Factory Method");
             String textCodeCPP = getCodeCPPFromNameCreationalPattern("Factory Method");
             String textCodeCS = getCodeCSFromNameCreationalPattern("Factory Method");
-            pattern.setData(labelPattern, labelIntent, labelImplement, labelProsNCons, textCodeJava, textCodePython, textCodeCPP, textCodeCS, "/Images/CreationalPatterns/FactoryMethod/intent.png", "/Images/CreationalPatterns/FactoryMethod/structure.png");
+            pattern.setData(labelPattern, labelIntent, labelImplement, labelProsNCons, textCodeJava, textCodePython, textCodeCPP, textCodeCS, "/Images/CreationalPatterns/FactoryMethod/intent.jpg", "/Images/CreationalPatterns/FactoryMethod/structure.png");
             MainContainer.getChildren().removeAll();
             MainContainer.getChildren().add(newContent3);
         }catch (Exception e){
