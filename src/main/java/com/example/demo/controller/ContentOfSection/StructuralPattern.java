@@ -80,8 +80,8 @@ public class StructuralPattern implements Initializable {
             String labelProsNCons = "- Single Responsibility Principle. You can separate the interface or data conversion code from the primary business logic of the program.\n" +
                     "- Open/Closed Principle. You can introduce new types of adapters into the program without breaking the existing client code, as long as they work with the adapters through the client interface.\n" +
                     "- The overall complexity of the code increases because you need to introduce a set of new interfaces and classes. Sometimes it’s simpler just to change the service class so that it matches the rest of your code.\n";
-            String textCodePython = getCodeJavaFromNameStructuralPattern("Adapter");
-            String textCodeJava = getCodePythonFromNameStructuralPattern("Adapter");
+            String textCodePython = getCodePythonFromNameStructuralPattern("Adapter");
+            String textCodeJava = getCodeJavaFromNameStructuralPattern("Adapter");
             String textCodeCPP = getCodeCPPFromNameStructuralPattern("Adapter");
             String textCodeCS = getCodeCSFromNameStructuralPattern("Adapter");
             String pathToImgIntent = "/Images/StructuralPatterns/Adapter/intent.png";
@@ -114,8 +114,8 @@ public class StructuralPattern implements Initializable {
                     "- Open/Closed Principle. You can introduce new abstractions and implementations independently from each other.\n" +
                     "- Single Responsibility Principle. You can focus on high-level logic in the abstraction and on platform details in the implementation.\n" +
                     "- You might make the code more complicated by applying the pattern to a highly cohesive class.\n";
-            String textCodePython = getCodeJavaFromNameStructuralPattern("Bridge");
-            String textCodeJava = getCodePythonFromNameStructuralPattern("Bridge");
+            String textCodePython = getCodePythonFromNameStructuralPattern("Bridge");
+            String textCodeJava = getCodeJavaFromNameStructuralPattern("Bridge");
             String textCodeCPP = getCodeCPPFromNameStructuralPattern("Bridge");
             String textCodeCS = getCodeCSFromNameStructuralPattern("Bridge");
             String pathToImgIntent = "/Images/StructuralPatterns/Bridge/intent.png";
@@ -144,8 +144,8 @@ public class StructuralPattern implements Initializable {
             String labelProsNCons = "- You can work with complex tree structures more conveniently: use polymorphism and recursion to your advantage.\n" +
                     "- Open/Closed Principle. You can introduce new element types into the app without breaking the existing code, which now works with the object tree.\n" +
                     "- It might be difficult to provide a common interface for classes whose functionality differs too much. In certain scenarios, you’d need to overgeneralize the component interface, making it harder to comprehend.\n";
-            String textCodePython = getCodeJavaFromNameStructuralPattern("Composite");
-            String textCodeJava = getCodePythonFromNameStructuralPattern("Composite");
+            String textCodePython = getCodePythonFromNameStructuralPattern("Composite");
+            String textCodeJava = getCodeJavaFromNameStructuralPattern("Composite");
             String textCodeCPP = getCodeCPPFromNameStructuralPattern("Composite");
             String textCodeCS = getCodeCSFromNameStructuralPattern("Composite");
             String pathToImgIntent = "/Images/StructuralPatterns/Composite/intent.png";
@@ -180,8 +180,8 @@ public class StructuralPattern implements Initializable {
                     "- It’s hard to remove a specific wrapper from the wrappers stack.\n" +
                     "- It’s hard to implement a decorator in such a way that its behavior doesn’t depend on the order in the decorators stack.\n" +
                     "- The initial configuration code of layers might look pretty ugly.\n";
-            String textCodePython = getCodeJavaFromNameStructuralPattern("Decorator");
-            String textCodeJava = getCodePythonFromNameStructuralPattern("Decorator");
+            String textCodePython = getCodePythonFromNameStructuralPattern("Decorator");
+            String textCodeJava = getCodeJavaFromNameStructuralPattern("Decorator");
             String textCodeCPP = getCodeCPPFromNameStructuralPattern("Decorator");
             String textCodeCS = getCodeCSFromNameStructuralPattern("Decorator");
             String pathToImgIntent = "/Images/StructuralPatterns/Decorator/intent.png";
@@ -208,8 +208,8 @@ public class StructuralPattern implements Initializable {
                     "4. If the facade becomes too big, consider extracting part of its behavior to a new, refined facade class.";
             String labelProsNCons = "- You can isolate your code from the complexity of a subsystem.\n" +
                     "- A facade can become a god object coupled to all classes of an app.";
-            String textCodePython = getCodeJavaFromNameStructuralPattern("Facade");
-            String textCodeJava = getCodePythonFromNameStructuralPattern("Facade");
+            String textCodePython = getCodePythonFromNameStructuralPattern("Facade");
+            String textCodeJava = getCodeJavaFromNameStructuralPattern("Facade");
             String textCodeCPP = getCodeCPPFromNameStructuralPattern("Facade");
             String textCodeCS = getCodeCSFromNameStructuralPattern("Facade");
             String pathToImgIntent = "/Images/StructuralPatterns/Facade/intent.png";
@@ -240,8 +240,8 @@ public class StructuralPattern implements Initializable {
             String labelProsNCons = "- You can save lots of RAM, assuming your program has tons of similar objects.\n" +
                     "- You might be trading RAM over CPU cycles when some of the context data needs to be recalculated each time somebody calls a flyweight method.\n" +
                     "- The code becomes much more complicated. New team members will always be wondering why the state of an entity was separated in such a way.\n";
-            String textCodePython = getCodeJavaFromNameStructuralPattern("Flyweight");
-            String textCodeJava = getCodePythonFromNameStructuralPattern("Flyweight");
+            String textCodePython = getCodePythonFromNameStructuralPattern("Flyweight");
+            String textCodeJava = getCodeJavaFromNameStructuralPattern("Flyweight");
             String textCodeCPP = getCodeCPPFromNameStructuralPattern("Flyweight");
             String textCodeCS = getCodeCSFromNameStructuralPattern("Flyweight");
             String pathToImgIntent = "/Images/StructuralPatterns/Flyweight/intent.png";
@@ -273,8 +273,8 @@ public class StructuralPattern implements Initializable {
                     "- Open/Closed Principle. You can introduce new proxies without changing the service or clients.\n" +
                     "- The code may become more complicated since you need to introduce a lot of new classes.\n" +
                     "- The response from the service might get delayed.\n";
-            String textCodePython = getCodeJavaFromNameStructuralPattern("Proxy");
-            String textCodeJava = getCodePythonFromNameStructuralPattern("Proxy");
+            String textCodePython = getCodePythonFromNameStructuralPattern("Proxy");
+            String textCodeJava = getCodeJavaFromNameStructuralPattern("Proxy");
             String textCodeCPP = getCodeCPPFromNameStructuralPattern("Proxy");
             String textCodeCS = getCodeCSFromNameStructuralPattern("Proxy");
             String pathToImgIntent = "/Images/StructuralPatterns/Proxy/intent.png";

@@ -131,7 +131,7 @@
                    </Label>
                   <AnchorPane>
                      <children>
-                        <Button maxHeight="30.0" maxWidth="70.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+                        <Button fx:id="btnCopy" maxHeight="30.0" maxWidth="70.0" mnemonicParsing="false" onAction="#copy" prefHeight="20.0" prefWidth="20.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -141,7 +141,7 @@
                            </graphic></Button>
                         <TabPane prefHeight="600.0" prefWidth="880.0" style="-fx-background-color: #e1e1e1;" tabClosingPolicy="UNAVAILABLE" AnchorPane.topAnchor="45.0">
                           <tabs>
-                              <Tab text="Java">
+                              <Tab fx:id="tabJava" text="Java">
                                   <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0">
                                           <children>
@@ -158,7 +158,7 @@
                                       </AnchorPane>
                                   </content>
                               </Tab>
-                            <Tab text="Python">
+                            <Tab fx:id="tabPython" text="Python">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -174,7 +174,7 @@
                                        </children></AnchorPane>
                               </content>
                             </Tab>
-                              <Tab text="C++">
+                              <Tab fx:id="tabCPP" text="C++">
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -190,7 +190,7 @@
                                        </children></AnchorPane>
                                  </content>
                               </Tab>
-                              <Tab text="C#">
+                              <Tab fx:id="tabCS" text="C#">
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>

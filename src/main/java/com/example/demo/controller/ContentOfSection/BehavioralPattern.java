@@ -96,8 +96,8 @@ public class BehavioralPattern implements Initializable {
                     "- Single Responsibility Principle. You can decouple classes that invoke operations from classes that perform operations.\n" +
                     "- Open/Closed Principle. You can introduce new handlers into the app without breaking the existing client code.\n" +
                     "- Some requests may end up unhandled.\n";
-            String textCodePython = getCodeJavaByNameBehavioralPattern("Chain of Responsibility");
-            String textCodeJava = getCodePythonByNameBehavioralPattern("Chain of Responsibility");
+            String textCodePython = getCodePythonByNameBehavioralPattern("Chain of Responsibility");
+            String textCodeJava = getCodeJavaByNameBehavioralPattern("Chain of Responsibility");
             String textCodeCPP = getCodeCPPByNameBehavioralPattern("Chain of Responsibility");
             String textCodeCS = getCodeCSByNameBehavioralPattern("Chain of Responsibility");
             String pathToImgIntent = "/Images/BehavioralPatterns/ChainOfResponsibility/intent.png";
@@ -132,8 +132,8 @@ public class BehavioralPattern implements Initializable {
                     "- You can implement deferred execution of operations.\n" +
                     "- You can assemble a set of simple commands into a complex one.\n" +
                     "- The code may become more complicated since you’re introducing a whole new layer between senders and receivers.\n";
-            String textCodePython = getCodeJavaByNameBehavioralPattern("Command");
-            String textCodeJava = getCodePythonByNameBehavioralPattern("Command");
+            String textCodePython = getCodePythonByNameBehavioralPattern("Command");
+            String textCodeJava = getCodeJavaByNameBehavioralPattern("Command");
             String textCodeCPP = getCodeCPPByNameBehavioralPattern("Command");
             String textCodeCS = getCodeCSByNameBehavioralPattern("Command");
             String pathToImgIntent = "/Images/BehavioralPatterns/Command/intent.png";
@@ -165,8 +165,8 @@ public class BehavioralPattern implements Initializable {
                     "- For the same reason, you can delay an iteration and continue it when needed.\n" +
                     "- Applying the pattern can be an overkill if your app only works with simple collections.\n" +
                     "- Using an iterator may be less efficient than going through elements of some specialized collections directly.\n";
-            String textCodePython = getCodeJavaByNameBehavioralPattern("Iterator");
-            String textCodeJava = getCodePythonByNameBehavioralPattern("Iterator");
+            String textCodePython = getCodePythonByNameBehavioralPattern("Iterator");
+            String textCodeJava = getCodeJavaByNameBehavioralPattern("Iterator");
             String textCodeCPP = getCodeCPPByNameBehavioralPattern("Iterator");
             String textCodeCS = getCodeCSByNameBehavioralPattern("Iterator");
             String pathToImgIntent = "/Images/BehavioralPatterns/Interator/intent.png";
@@ -199,8 +199,8 @@ public class BehavioralPattern implements Initializable {
                     "- You can reduce coupling between various components of a program.\n" +
                     "- You can reuse individual components more easily.\n" +
                     "- Over time a mediator can evolve into a God Object.";
-            String textCodePython = getCodeJavaByNameBehavioralPattern("Mediator");
-            String textCodeJava = getCodePythonByNameBehavioralPattern("Mediator");
+            String textCodePython = getCodePythonByNameBehavioralPattern("Mediator");
+            String textCodeJava = getCodeJavaByNameBehavioralPattern("Mediator");
             String textCodeCPP = getCodeCPPByNameBehavioralPattern("Mediator");
             String textCodeCS = getCodeCSByNameBehavioralPattern("Mediator");
             String pathToImgIntent = "/Images/BehavioralPatterns/Mediator/intent.png";
@@ -235,8 +235,8 @@ public class BehavioralPattern implements Initializable {
                     "- The app might consume lots of RAM if clients create mementos too often.\n" +
                     "- Caretakers should track the originator’s lifecycle to be able to destroy obsolete mementos.\n" +
                     "- Most dynamic programming languages, such as PHP, Python and JavaScript, can’t guarantee that the state within the memento stays untouched.\n";
-            String textCodePython = getCodeJavaByNameBehavioralPattern("Memento");
-            String textCodeJava = getCodePythonByNameBehavioralPattern("Memento");
+            String textCodePython = getCodePythonByNameBehavioralPattern("Memento");
+            String textCodeJava = getCodeJavaByNameBehavioralPattern("Memento");
             String textCodeCPP = getCodeCPPByNameBehavioralPattern("Memento");
             String textCodeCS = getCodeCSByNameBehavioralPattern("Memento");
             String pathToImgIntent = "/Images/BehavioralPatterns/Observer/intent.png";
@@ -267,8 +267,8 @@ public class BehavioralPattern implements Initializable {
             String labelProsNCons = "- Open/Closed Principle. You can introduce new subscriber classes without having to change the publisher’s code (and vice versa if there’s a publisher interface).\n" +
                     "- You can establish relations between objects at runtime.\n" +
                     "- Subscribers are notified in random order.\n";
-            String textCodePython = getCodeJavaByNameBehavioralPattern("Observer");
-            String textCodeJava = getCodePythonByNameBehavioralPattern("Observer");
+            String textCodePython = getCodePythonByNameBehavioralPattern("Observer");
+            String textCodeJava = getCodeJavaByNameBehavioralPattern("Observer");
             String textCodeCPP = getCodeCPPByNameBehavioralPattern("Observer");
             String textCodeCS = getCodeCSByNameBehavioralPattern("Observer");
             String pathToImgIntent = "/Images/BehavioralPatterns/Observer/intent.png";
@@ -303,8 +303,8 @@ public class BehavioralPattern implements Initializable {
                     "- Open/Closed Principle. Introduce new states without changing existing state classes or the context.\n" +
                     "- Simplify the code of the context by eliminating bulky state machine conditionals.\n" +
                     "- Applying the pattern can be overkill if a state machine has only a few states or rarely changes.\n";
-            String textCodePython = getCodeJavaByNameBehavioralPattern("State");
-            String textCodeJava = getCodePythonByNameBehavioralPattern("State");
+            String textCodePython = getCodePythonByNameBehavioralPattern("State");
+            String textCodeJava = getCodeJavaByNameBehavioralPattern("State");
             String textCodeCPP = getCodeCPPByNameBehavioralPattern("State");
             String textCodeCS = getCodeCSByNameBehavioralPattern("State");
             String pathToImgIntent = "/Images/BehavioralPatterns/State/intent.png";
@@ -337,8 +337,8 @@ public class BehavioralPattern implements Initializable {
                     "- If you only have a couple of algorithms and they rarely change, there’s no real reason to overcomplicate the program with new classes and interfaces that come along with the pattern.\n" +
                     "- Clients must be aware of the differences between strategies to be able to select a proper one.\n" +
                     "- A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you’d have used the strategy objects, but without bloating your code with extra classes and interfaces.\n";
-            String textCodePython = getCodeJavaByNameBehavioralPattern("Strategy");
-            String textCodeJava = getCodePythonByNameBehavioralPattern("Strategy");
+            String textCodePython = getCodePythonByNameBehavioralPattern("Strategy");
+            String textCodeJava = getCodeJavaByNameBehavioralPattern("Strategy");
             String textCodeCPP = getCodeCPPByNameBehavioralPattern("Strategy");
             String textCodeCS = getCodeCSByNameBehavioralPattern("Strategy");
             String pathToImgIntent = "/Images/BehavioralPatterns/Strategy/intent.png";
@@ -369,8 +369,8 @@ public class BehavioralPattern implements Initializable {
                     "- Some clients may be limited by the provided skeleton of an algorithm.\n" +
                     "- You might violate the Liskov Substitution Principle by suppressing a default step implementation via a subclass.\n" +
                     "- Template methods tend to be harder to maintain the more steps they have.\n";
-            String textCodePython = getCodeJavaByNameBehavioralPattern("Template Method");
-            String textCodeJava = getCodePythonByNameBehavioralPattern("Template Method");
+            String textCodePython = getCodePythonByNameBehavioralPattern("Template Method");
+            String textCodeJava = getCodeJavaByNameBehavioralPattern("Template Method");
             String textCodeCPP = getCodeCPPByNameBehavioralPattern("Template Method");
             String textCodeCS = getCodeCSByNameBehavioralPattern("Template Method");
             String pathToImgIntent = "/Images/BehavioralPatterns/TemplateMethod/intent.png";
@@ -402,8 +402,8 @@ public class BehavioralPattern implements Initializable {
                     "- A visitor object can accumulate some useful information while working with various objects. This might be handy when you want to traverse some complex object structure, such as an object tree, and apply the visitor to each object of this structure.\n" +
                     "- You need to update all visitors each time a class gets added to or removed from the element hierarchy.\n" +
                     "- Visitors might lack the necessary access to the private fields and methods of the elements that they’re supposed to work with.\n";
-            String textCodePython = getCodeJavaByNameBehavioralPattern("Visitor");
-            String textCodeJava = getCodePythonByNameBehavioralPattern("Visitor");
+            String textCodePython = getCodePythonByNameBehavioralPattern("Visitor");
+            String textCodeJava = getCodeJavaByNameBehavioralPattern("Visitor");
             String textCodeCPP = getCodeCPPByNameBehavioralPattern("Visitor");
             String textCodeCS = getCodeCSByNameBehavioralPattern("Visitor");
             String pathToImgIntent = "/Images/BehavioralPatterns/Visitor/intent.png";
