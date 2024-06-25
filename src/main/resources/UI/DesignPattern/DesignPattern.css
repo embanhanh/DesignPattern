@@ -47,3 +47,7 @@ TextFlow{
     -fx-border-color: black;
 }
 
+TextArea{
+    -fx-control-inner-background: lightgray; /* Màu nền của TextArea */
+}
+

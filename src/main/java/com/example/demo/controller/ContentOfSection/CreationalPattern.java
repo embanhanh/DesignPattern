@@ -113,7 +113,7 @@ public class CreationalPattern implements Initializable {
             String textCodeJava = getCodeJavaByNameCreationalPattern("Factory Method");
             String textCodeCPP = getCodeCPPFromNameCreationalPattern("Factory Method");
             String textCodeCS = getCodeCSFromNameCreationalPattern("Factory Method");
-            pattern.setData(labelPattern, labelIntent, labelImplement, labelProsNCons, textCodeJava, textCodePython, textCodeCPP, textCodeCS, "/Images/CreationalPatterns/FactoryMethod/intent.jpg", "/Images/CreationalPatterns/FactoryMethod/structure.png");
+            pattern.setData(labelPattern, labelIntent, labelImplement, labelProsNCons, textCodeJava, textCodePython, textCodeCPP, textCodeCS, "/Images/CreationalPatterns/FactoryMethod/intent.png", "/Images/CreationalPatterns/FactoryMethod/structure.png");
             MainContainer.getChildren().removeAll();
             MainContainer.getChildren().add(newContent3);
         }catch (Exception e){

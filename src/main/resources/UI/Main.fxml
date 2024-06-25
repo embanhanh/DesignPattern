@@ -31,40 +31,6 @@
             </AnchorPane>
          <VBox prefHeight="680.0" prefWidth="298.0" styleClass="nav-container">
             <children>
-               <AnchorPane prefHeight="75.0" prefWidth="298.0">
-                  <children>
-                     <AnchorPane fx:id="tabFav" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="51.0" prefWidth="238.0" styleClass="default-pane">
-                        <children>
-                           <Label layoutX="112.0" layoutY="16.0" prefHeight="22.0" prefWidth="66.0" styleClass="default-text" text="Favorite" textAlignment="CENTER" />
-                           <Circle id="imageCircle" layoutX="40.0" layoutY="28.0" radius="26.0" strokeType="INSIDE" style="-fx-stroke: #3596d8;">
-                              <fill>
-                                 <ImagePattern>
-                                    <image>
-                                       <Image url="@../Images/Icons/favorite.png" />
-                                    </image>
-                                 </ImagePattern>
-                              </fill>
-                              <stroke>
-                                 <LinearGradient endX="1.0" endY="1.0">
-                                    <stops>
-                                       <Stop>
-                                          <color>
-                                             <Color />
-                                          </color>
-                                       </Stop>
-                                       <Stop offset="1.0">
-                                          <color>
-                                             <Color red="1.0" green="1.0" blue="1.0" />
-                                          </color>
-                                       </Stop>
-                                    </stops>
-                                 </LinearGradient>
-                              </stroke>
-                           </Circle>
-                        </children>
-                     </AnchorPane>
-                  </children>
-               </AnchorPane>
                   <AnchorPane prefHeight="65.0" prefWidth="175.0">
                       <AnchorPane fx:id="tabHome" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="52.0" prefWidth="238.0" styleClass="selected-pane">
                           <Label layoutX="119.0" layoutY="15.0" prefHeight="19.0" prefWidth="43.0" styleClass="default-text" text="Home" textAlignment="CENTER" />

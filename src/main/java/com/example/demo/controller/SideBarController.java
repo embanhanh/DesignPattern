@@ -23,15 +23,11 @@ public class SideBarController {
     @FXML
     private HBox MainContainer;
 
-
     @FXML
     private AnchorPane tabBehavioral;
 
     @FXML
     private AnchorPane tabCreational;
-
-    @FXML
-    private AnchorPane tabFav;
 
     @FXML
     private AnchorPane tabHome;
@@ -45,13 +41,12 @@ public class SideBarController {
     private void initialize() {
 
         selectedBtn = tabHome;
-        tabFav.getStyleClass().add("default-pane");
         tabStructural.getStyleClass().add("default-pane");
         tabBehavioral.getStyleClass().add("default-pane");
         tabCreational.getStyleClass().add("default-pane");
         tabHome.getStyleClass().add("selected-pane");
         try {
-            AnchorPane additionalView = FXMLLoader.load(getClass().getResource("/UI/DesignPattern/DesignPattern.fxml"));
+            AnchorPane additionalView = FXMLLoader.load(getClass().getResource("/UI/Home.fxml"));
             MainContainer.getChildren().add(additionalView);
         } catch (IOException e) {
             e.printStackTrace();
@@ -137,10 +132,4 @@ public class SideBarController {
         selectedBtn.getStyleClass().add("selected-pane");
     }
 
-    private void applySlideInAnimation(AnchorPane pane) {
-        TranslateTransition transition = new TranslateTransition(Duration.millis(300), pane);
-        transition.setFromY(-30);
-        transition.setToY(0);
-        transition.play();
-    }
 }

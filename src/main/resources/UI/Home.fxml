@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="750.0" prefWidth="950.0" style="-fx-background-color: transparent;" stylesheets="@GlobalStyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.HomeController">
+   <children>
+      <ScrollPane prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: transparent;">
+         <content>
+            <VBox prefHeight="900.0" prefWidth="935.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="361.0" style="-fx-text-fill: #19abe3; -fx-font-size: 25; -fx-font-weight: bold;" text="  What's a design pattern?">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/question.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <TextFlow prefHeight="84.0" prefWidth="839.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="A design pattern " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="in software engineering is a general, reusable solution to a commonly occurring problem within a given context in software design. It's not a finished design that can be directly transformed into code but rather a template for how to solve a problem that can be used in many different situations." />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </TextFlow>
+                  <Label prefHeight="50.0" prefWidth="594.0" style="-fx-text-fill: #19abe3; -fx-font-size: 25; -fx-font-weight: bold;" text="  Why should you learn design patterns?">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/questions.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <TextFlow maxHeight="0.0" prefWidth="908.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="The truth is that you might manage to work as a programmer for many years without knowing about a single pattern. A lot of people do just that. Even in that case, though, you might be implementing some patterns without even knowing it. So why would you spend time learning them?" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </TextFlow>
+                  <TextFlow prefHeight="78.0" prefWidth="908.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="1. " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="Design patterns are a toolkit of " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="tried and tested solutions " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="to common problems in software design. Even if you never encounter these problems, knowing patterns is still useful because it teaches you how to solve all sorts of problems using principles of object-oriented design." />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" />
+                     </padding>
+                  </TextFlow>
+                  <TextFlow prefHeight="75.0" prefWidth="908.0">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" />
+                     </padding>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="2. " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="Design patterns define a common language that you and your teammates can use to communicate more efficiently. You can say, “Oh, just use a Singleton for that,” and everyone will understand the idea behind your suggestion. No need to explain what a singleton is if you know the pattern and its name." />
+                     </children>
+                  </TextFlow>
+                  <Label prefHeight="50.0" prefWidth="571.0" style="-fx-text-fill: #19abe3; -fx-font-size: 25; -fx-font-weight: bold;" text="  Classification of design patterns">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/classification.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <TextFlow prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="Design patterns differ by their complexity, level of detail and scale of applicability to the entire system being designed. I like the analogy to road construction: you can make an intersection safer by either installing some traffic lights or building an entire multi-level interchange with underground passages for pedestrians." />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TextFlow>
+                  <TextFlow prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="The most basic and low-level patterns are often called " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="idioms" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text=". They usually apply only to a single programming language." />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TextFlow>
+                  <TextFlow prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="The most universal and high-level patterns are " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="architectural patterns" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text=". Developers can implement these patterns in virtually any language. Unlike other patterns, they can be used to design the architecture of an entire application." />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TextFlow>
+                  <TextFlow prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="In addition, all patterns can be categorized by their " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="intent, or purpose" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text=". This book covers three main groups of patterns:" />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </TextFlow>
+                  <TextFlow prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="1. Creational patterns " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="provide object creation mechanisms that increase flexibility and reuse of existing code." />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" top="10.0" />
+                     </padding>
+                  </TextFlow>
+                  <TextFlow prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="2. Structural patterns " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="explain how to assemble objects and classes into larger structures, while keeping these structures flexible and efficient." />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" top="10.0" />
+                     </padding>
+                  </TextFlow>
+                  <TextFlow prefWidth="908.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-bold" text="3. Behavioral patterns " />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-normal" text="take care of effective communication and the assignment of responsibilities between objects." />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" top="10.0" />
+                     </padding>
+                  </TextFlow>
+               </children>
+               <padding>
+                  <Insets left="30.0" top="30.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

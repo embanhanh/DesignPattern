@@ -57,3 +57,14 @@
     -fx-border-radius: 50%;
     -fx-background-radius: 50%;
 }
+
+.text-bold{
+    -fx-fill: #024486;
+    -fx-font-weight: bold;
+    -fx-font-size: 17px;
+}
+
+.text-normal{
+    -fx-font-size: 15px;
+    -fx-fill: black;
+}

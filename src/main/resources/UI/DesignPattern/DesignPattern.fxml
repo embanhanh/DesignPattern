@@ -68,6 +68,9 @@
                      <image>
                         <Image url="@../../Images/CreationalPatterns/FactoryMethod/structure.png" />
                      </image>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
                   </ImageView>
                   <TextFlow fx:id="TextFlowStructure" prefHeight="0.0" prefWidth="900.0">
                      <children>
@@ -136,6 +139,14 @@
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../Images/Icons/copy.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                         <Button maxHeight="30.0" maxWidth="200.0" mnemonicParsing="false" onAction="#btnDownloadDemo" prefHeight="20.0" prefWidth="150.0" style="-fx-text-fill: #19abe3;" text="Dowload Demo" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/Icons/download.png" />
                                  </image>
                               </ImageView>
                            </graphic></Button>
