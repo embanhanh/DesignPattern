@@ -12,15 +12,18 @@
 
 <AnchorPane fx:id="MainContainer" prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@ContentOfSection.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ContentOfSection.BehavioralPattern">
     <children>
-        <VBox alignment="TOP_CENTER" prefWidth="950.0">
+        <VBox alignment="TOP_CENTER" prefHeight="113.0" prefWidth="950.0" styleClass="title_container">
             <children>
-                <Label prefHeight="137.0" prefWidth="950.0" style="-fx-font-size: 50px; -fx-font-weight: bold;" text="Behavioral Design Patterns" />
-                <Label maxWidth="-Infinity" prefWidth="950.0" style="-fx-font-size: 14px;" text="Behavioral design patterns are concerned with algorithms and the assignment of responsibilities between objects." wrapText="true" />
+                <Label prefHeight="80.0" prefWidth="950.0" style="-fx-font-size: 50px; -fx-font-weight: bold;" styleClass="title" text="Behavioral Design Patterns" />
+                <Label maxWidth="-Infinity" prefWidth="950.0" style="-fx-font-size: 14px;" styleClass="description" text="Behavioral design patterns are concerned with algorithms and the assignment of responsibilities between objects." wrapText="true">
+               <padding>
+                  <Insets left="50.0" />
+               </padding></Label>
             </children>
         </VBox>
-      <ScrollPane layoutY="183.0" prefHeight="620.0" style="-fx-background-color: #fff;">
+      <ScrollPane layoutY="133.0" prefHeight="670.0" prefWidth="953.0" style="-fx-background-color: transparent;" styleClass="container">
          <content>
-             <VBox>
+             <VBox style="-fx-background-color: #fff;">
                  <HBox prefWidth="951.0" spacing="20.0">
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
                      <Button fx:id="btnChainOfResponsibility" contentDisplay="TOP" onAction="#btnChainOfResponsibilityOnAction">

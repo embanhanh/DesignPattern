@@ -2,7 +2,7 @@
     -fx-background-color: #fff; /* Màu nền */
     -fx-text-fill: #000; /* Màu chữ */
     -fx-font-size: 14px; /* Kích thước chữ */
-    -fx-border-radius: 1px; /* Bán kính bo tròn */
+    -fx-border-radius: 4px; /* Bán kính bo tròn */
     -fx-border-width: 1px;
     -fx-border-color: #00000020;
     -fx-font-weight: bold; /* Kiểu chữ */
@@ -11,6 +11,48 @@
 }
 
 .button:hover {
-    /*-fx-background-color: #0056b3; !* Màu nền khi di chuột qua *!*/
-    -fx-border-color: #e74c3c;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 15, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.button1 {
+    /*-fx-background-color: linear-gradient(to bottom, #f7dc00,#c2ad02);*/
+    -fx-background-color: #2392c0;
+}
+
+.button2 {
+    /*-fx-background-color: linear-gradient(to bottom,  #0f7df3,#333fff);*/
+    -fx-background-color: #71c7d4;
+}
+
+.button3 {
+    /*-fx-background-color: linear-gradient(to bottom,  #21c95e,#128837);*/
+    -fx-background-color: #f2b363;
+}
+
+.button4 {
+    /*-fx-background-color: linear-gradient(to bottom, #ed4d4d, #db1212);*/
+    -fx-background-color: #ed6d3e;
+}
+
+.button5 {
+    /*-fx-background-color: linear-gradient(to bottom, #9400d3, #4b0082);*/
+    -fx-background-color: #9fc48e;
+}
+
+.container Label{
+    -fx-text-fill: #f0f0f0;
+}
+
+.title{
+    -fx-text-fill: #024486;
+    -fx-alignment: center;
+}
+
+.description{
+    -fx-text-fill: gray ;
+}
+
+.title_container{
+    -fx-background-color: #f4f5f7;
 }

@@ -1,57 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.ImagePattern?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
 
 <HBox fx:id="MainContainer" prefWidth="1250.0" style="-fx-background-color: white;" stylesheets="@GlobalStyle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.SideBarController">
     <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="300.0" styleClass="box-outside">
         <VBox alignment="TOP_CENTER" prefHeight="778.0" prefWidth="398.0" styleClass="border-right">
-            <AnchorPane prefHeight="113.0" prefWidth="267.0" styleClass="border-bottom">
-                <Label layoutX="21.0" layoutY="17.0" styleClass="book-logo" text="Design Pattern" />
+            <AnchorPane prefHeight="97.0" prefWidth="298.0" styleClass="border-bottom">
+                <Label layoutX="13.0" layoutY="11.0" prefHeight="75.0" prefWidth="271.0" styleClass="book-logo" text="Design Pattern">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Icons/layers.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="25.0" />
+               </padding></Label>
             </AnchorPane>
-         <AnchorPane prefHeight="65.0" prefWidth="175.0">
+         <VBox prefHeight="680.0" prefWidth="298.0" styleClass="nav-container">
             <children>
-               <AnchorPane fx:id="tabFav" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
+               <AnchorPane prefHeight="75.0" prefWidth="298.0">
                   <children>
-                     <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="91.0" styleClass="default-text" text="Favorite" textAlignment="CENTER" />
+                     <AnchorPane fx:id="tabFav" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="51.0" prefWidth="238.0" styleClass="default-pane">
+                        <children>
+                           <Label layoutX="112.0" layoutY="16.0" prefHeight="22.0" prefWidth="66.0" styleClass="default-text" text="Favorite" textAlignment="CENTER" />
+                           <Circle id="imageCircle" layoutX="40.0" layoutY="28.0" radius="26.0" strokeType="INSIDE" style="-fx-stroke: #3596d8;">
+                              <fill>
+                                 <ImagePattern>
+                                    <image>
+                                       <Image url="@../Images/Icons/favorite.png" />
+                                    </image>
+                                 </ImagePattern>
+                              </fill>
+                              <stroke>
+                                 <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                       <Stop>
+                                          <color>
+                                             <Color />
+                                          </color>
+                                       </Stop>
+                                       <Stop offset="1.0">
+                                          <color>
+                                             <Color red="1.0" green="1.0" blue="1.0" />
+                                          </color>
+                                       </Stop>
+                                    </stops>
+                                 </LinearGradient>
+                              </stroke>
+                           </Circle>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+                  <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                      <AnchorPane fx:id="tabHome" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="52.0" prefWidth="238.0" styleClass="selected-pane">
+                          <Label layoutX="119.0" layoutY="15.0" prefHeight="19.0" prefWidth="43.0" styleClass="default-text" text="Home" textAlignment="CENTER" />
+                     <Circle id="imageCircle" layoutX="40.0" layoutY="26.0" radius="26.0" strokeType="INSIDE" style="-fx-stroke: #3596d8;">
+                        <fill>
+                           <ImagePattern>
+                              <image>
+                                 <Image url="@../Images/Icons/home.png" />
+                              </image>
+                           </ImagePattern>
+                        </fill>
+                        <stroke>
+                           <LinearGradient endX="1.0" endY="1.0">
+                              <stops>
+                                 <Stop>
+                                    <color>
+                                       <Color />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="1.0">
+                                    <color>
+                                       <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                 </Stop>
+                              </stops>
+                           </LinearGradient>
+                        </stroke>
+                     </Circle>
+                      </AnchorPane>
+                  </AnchorPane>
+               <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                  <children>
+                     <AnchorPane fx:id="tabCreational" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_CreationalPattern" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
+                        <children>
+                           <Label layoutX="80.0" layoutY="15.0" prefHeight="22.0" prefWidth="144.0" styleClass="default-text" text="Creational Patterns" />
+                           <Circle id="imageCircle" layoutX="40.0" layoutY="26.0" radius="26.0" strokeType="INSIDE" style="-fx-stroke: #3596d8;">
+                              <fill>
+                                 <ImagePattern>
+                                    <image>
+                                       <Image url="@../Images/Icons/book.png" />
+                                    </image>
+                                 </ImagePattern>
+                              </fill>
+                              <stroke>
+                                 <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                       <Stop>
+                                          <color>
+                                             <Color />
+                                          </color>
+                                       </Stop>
+                                       <Stop offset="1.0">
+                                          <color>
+                                             <Color red="1.0" green="1.0" blue="1.0" />
+                                          </color>
+                                       </Stop>
+                                    </stops>
+                                 </LinearGradient>
+                              </stroke>
+                           </Circle>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+               <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                  <children>
+                     <AnchorPane fx:id="tabStructural" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_StructuralPattern" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
+                        <children>
+                           <Label layoutX="80.0" layoutY="16.0" prefHeight="22.0" prefWidth="144.0" styleClass="default-text" text="Structural Patterns" />
+                           <Circle id="imageCircle" layoutX="40.0" layoutY="29.0" radius="26.0" strokeType="INSIDE" style="-fx-stroke: #3596d8;">
+                              <fill>
+                                 <ImagePattern>
+                                    <image>
+                                       <Image url="@../Images/Icons/book.png" />
+                                    </image>
+                                 </ImagePattern>
+                              </fill>
+                              <stroke>
+                                 <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                       <Stop>
+                                          <color>
+                                             <Color />
+                                          </color>
+                                       </Stop>
+                                       <Stop offset="1.0">
+                                          <color>
+                                             <Color red="1.0" green="1.0" blue="1.0" />
+                                          </color>
+                                       </Stop>
+                                    </stops>
+                                 </LinearGradient>
+                              </stroke>
+                           </Circle>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+               <AnchorPane prefHeight="65.0" prefWidth="175.0">
+                  <children>
+                     <AnchorPane fx:id="tabBehavioral" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_BehavioralPattern" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
+                        <children>
+                           <Label layoutX="80.0" layoutY="17.0" prefHeight="22.0" prefWidth="144.0" styleClass="default-text" text="Behavioral Patterns" />
+                           <Circle id="imageCircle" layoutX="40.0" layoutY="28.0" radius="26.0" strokeType="INSIDE" style="-fx-stroke: #3596d8;">
+                              <fill>
+                                 <ImagePattern>
+                                    <image>
+                                       <Image url="@../Images/Icons/book.png" />
+                                    </image>
+                                 </ImagePattern>
+                              </fill>
+                              <stroke>
+                                 <LinearGradient endX="1.0" endY="1.0">
+                                    <stops>
+                                       <Stop>
+                                          <color>
+                                             <Color />
+                                          </color>
+                                       </Stop>
+                                       <Stop offset="1.0">
+                                          <color>
+                                             <Color red="1.0" green="1.0" blue="1.0" />
+                                          </color>
+                                       </Stop>
+                                    </stops>
+                                 </LinearGradient>
+                              </stroke>
+                           </Circle>
+                        </children>
+                     </AnchorPane>
                   </children>
                </AnchorPane>
             </children>
-         </AnchorPane>
-            <AnchorPane prefHeight="65.0" prefWidth="175.0">
-                <AnchorPane fx:id="tabHome" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="38.0" prefWidth="237.0" styleClass="selected-pane">
-                    <Label  layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="43.0" styleClass="default-text" text="Home" textAlignment="CENTER" />
-                </AnchorPane>
-            </AnchorPane>
-         <AnchorPane prefHeight="65.0" prefWidth="175.0">
-            <children>
-               <AnchorPane fx:id="tabCreational" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_CreationalPattern" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
-                  <children>
-                     <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="127.0" styleClass="default-text" text="Creational Patterns" />
-                  </children>
-               </AnchorPane>
-            </children>
-         </AnchorPane>
-         <AnchorPane prefHeight="65.0" prefWidth="175.0">
-            <children>
-               <AnchorPane fx:id="tabStructural" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_StructuralPattern" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
-                  <children>
-                     <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="127.0" styleClass="default-text" text="Structural Patterns" />
-                  </children>
-               </AnchorPane>
-            </children>
-         </AnchorPane>
-         <AnchorPane prefHeight="65.0" prefWidth="175.0">
-            <children>
-               <AnchorPane fx:id="tabBehavioral" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_BehavioralPattern" prefHeight="38.0" prefWidth="237.0" styleClass="default-pane">
-                  <children>
-                     <Label layoutX="55.0" layoutY="10.0" prefHeight="19.0" prefWidth="127.0" styleClass="default-text" text="Behavioral Patterns" />
-                  </children>
-               </AnchorPane>
-            </children>
-         </AnchorPane>
+         </VBox>
         </VBox>
     </HBox>
 </HBox>

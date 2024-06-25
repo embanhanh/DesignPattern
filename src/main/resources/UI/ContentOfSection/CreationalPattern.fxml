@@ -12,18 +12,21 @@
 
 <AnchorPane fx:id="MainContainer" prefHeight="800.0" prefWidth="950.0" style="-fx-background-color: #fff;" stylesheets="@ContentOfSection.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.ContentOfSection.CreationalPattern">
     <children>
-        <VBox alignment="TOP_CENTER" prefWidth="950.0">
+        <VBox alignment="TOP_CENTER" prefHeight="113.0" prefWidth="950.0" styleClass="title_container">
             <children>
-                <Label prefHeight="137.0" prefWidth="950.0" style="-fx-font-size: 50px; -fx-font-weight: bold;" text="Creational Design Patterns" />
-                <Label maxWidth="-Infinity" prefWidth="950.0" style="-fx-font-size: 14px;" text="Creational design patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code. " wrapText="true" />
+                <Label prefHeight="80.0" prefWidth="950.0" style="-fx-font-size: 50px; -fx-font-weight: bold;" styleClass="title" text="Creational Design Patterns" />
+                <Label maxWidth="-Infinity" prefWidth="950.0" style="-fx-font-size: 14px;" styleClass="description" text="Creational design patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code. " wrapText="true">
+               <padding>
+                  <Insets left="50.0" />
+               </padding></Label>
             </children>
         </VBox>
-      <ScrollPane layoutY="183.0" prefHeight="620.0" style="-fx-background-color: #fff;">
+      <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="128.0" prefHeight="718.0" prefWidth="954.0" style="-fx-background-color: transparent;" styleClass="container">
          <content>
-             <VBox>
-                 <HBox prefWidth="951.0" spacing="20.0">
+             <VBox style="-fx-background-color: #fff;">
+                 <HBox prefWidth="953.0" spacing="20.0" style="-fx-background-color: #fff;">
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnFactoryMethod" contentDisplay="TOP" onAction="#btnFactoryMethodOnAction">
+                     <Button fx:id="btnFactoryMethod" contentDisplay="TOP" onAction="#btnFactoryMethodOnAction" styleClass="button1">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -43,7 +46,7 @@
                          </graphic>
                      </Button>
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnAbstractFactory" contentDisplay="TOP" onAction="#btnAbstractFactoryOnAction">
+                     <Button fx:id="btnAbstractFactory" contentDisplay="TOP" onAction="#btnAbstractFactoryOnAction" styleClass="button2">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -62,7 +65,7 @@
                              </VBox>
                          </graphic>
                      </Button>
-                     <Button fx:id="btnBuilder" contentDisplay="TOP" onAction="#btnBuilderOnAction">
+                     <Button fx:id="btnBuilder" contentDisplay="TOP" onAction="#btnBuilderOnAction" styleClass="button3">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <HBox>
@@ -83,7 +86,7 @@
                  </HBox>
                  <HBox prefWidth="951.0" spacing="20.0">
                      <!--                    <Region HBox.hgrow="ALWAYS" />-->
-                     <Button fx:id="btnPrototype" contentDisplay="TOP" onAction="#btnPrototypeOnAction">
+                     <Button fx:id="btnPrototype" contentDisplay="TOP" onAction="#btnPrototypeOnAction" styleClass="button4">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <children>
@@ -102,7 +105,7 @@
                              </VBox>
                          </graphic>
                      </Button>
-                     <Button fx:id="btnSingleton" contentDisplay="TOP" onAction="#btnSingletonOnAction">
+                     <Button fx:id="btnSingleton" contentDisplay="TOP" onAction="#btnSingletonOnAction" styleClass="button5">
                          <graphic>
                              <VBox alignment="TOP_LEFT">
                                  <HBox>

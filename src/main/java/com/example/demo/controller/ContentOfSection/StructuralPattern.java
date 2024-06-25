@@ -39,9 +39,26 @@ public class StructuralPattern implements Initializable {
     @FXML
     private Button btnProxy;
 
+    private static final String[] BUTTON_STYLES = {
+            "button1", "button2", "button3", "button4", "button5"
+    };
+
+    private int currentStyleIndex = 0;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        applyRandomStyles(btnAdapter);
+        applyRandomStyles(btnBidge);
+        applyRandomStyles(btnComposite);
+        applyRandomStyles(btnDecorator);
+        applyRandomStyles(btnFacade);
+        applyRandomStyles(btnFlyweight);
+        applyRandomStyles(btnProxy);
+    }
 
+    private void applyRandomStyles(Button button) {
+        button.getStyleClass().add(BUTTON_STYLES[currentStyleIndex]);
+        currentStyleIndex = (currentStyleIndex + 1) % BUTTON_STYLES.length;
     }
 
     @FXML
