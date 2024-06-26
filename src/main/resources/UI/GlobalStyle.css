@@ -68,3 +68,24 @@
     -fx-font-size: 15px;
     -fx-fill: black;
 }
+
+.search_container{
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 999;
+}
+
+.text_input{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.button-search{
+    -fx-text-fill: #19abe3;
+    -fx-background-color: #011f56;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.5, 2, 2);
+    -fx-background-radius: 8;
+}
+
+.button-search:hover {
+    -fx-effect: dropshadow(gaussian, rgba(136,179,216,1), 10, 0.5, 2, 2);
+}
