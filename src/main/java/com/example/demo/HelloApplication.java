@@ -8,9 +8,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.example.demo.Handle.SearchHandle.searchPattern;
+
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        System.out.println(searchPattern("behavioral design pattern that lets you traverse elements"));
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/Main.fxml"));
             Scene scene = new Scene(loader.load());
