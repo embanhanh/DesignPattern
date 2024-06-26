@@ -34,7 +34,7 @@
          <VBox prefHeight="680.0" prefWidth="298.0" styleClass="nav-container">
             <children>
                   <AnchorPane prefHeight="65.0" prefWidth="175.0">
-                      <AnchorPane fx:id="tabHome" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick" prefHeight="52.0" prefWidth="238.0" styleClass="selected-pane">
+                      <AnchorPane fx:id="tabHome" layoutX="27.0" layoutY="14.0" onMouseClicked="#handleButtonClick_Home" prefHeight="52.0" prefWidth="238.0" styleClass="selected-pane">
                           <Label layoutX="119.0" layoutY="15.0" prefHeight="19.0" prefWidth="43.0" styleClass="default-text" text="Home" textAlignment="CENTER" />
                      <Circle id="imageCircle" layoutX="40.0" layoutY="26.0" radius="26.0" strokeType="INSIDE" style="-fx-stroke: #3596d8;">
                         <fill>
