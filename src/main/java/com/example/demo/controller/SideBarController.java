@@ -6,10 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TitledPane;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -44,6 +41,9 @@ public class SideBarController {
 
     @FXML
     private AnchorPane tabStructural;
+
+    @FXML
+    private TextField textInput;
 
     private AnchorPane selectedBtn;
 
@@ -163,7 +163,7 @@ public class SideBarController {
     }
 
     public void handleSearch() {
-        String pattern = searchPattern("while providing a global access point to");
+        String pattern = searchPattern(textInput.getText());
         System.out.println("Pattern: " + pattern);
         switch (pattern) {
             case "Factory Method" -> btnFactoryMethodOnAction();

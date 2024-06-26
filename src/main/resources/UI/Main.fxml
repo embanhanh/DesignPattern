@@ -167,7 +167,7 @@
                </AnchorPane>
                <AnchorPane prefHeight="55.0" prefWidth="298.0">
                   <children>
-                     <Button layoutX="112.0" layoutY="57.0" mnemonicParsing="false" styleClass="button-search" text="Search" />
+                     <Button layoutX="112.0" layoutY="57.0" mnemonicParsing="false" styleClass="button-search" text="Search" onMouseClicked="#handleSearch"/>
                      <AnchorPane layoutX="9.0" layoutY="14.0" prefHeight="32.0" prefWidth="271.0" styleClass="search_container">
                         <children>
                            <ImageView fitHeight="22.0" fitWidth="30.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
@@ -175,7 +175,7 @@
                                  <Image url="@../Images/Icons/search.png" />
                               </image>
                            </ImageView>
-                           <TextField layoutX="30.0" layoutY="2.0" prefHeight="26.0" prefWidth="226.0" promptText="search" styleClass="text_input" />
+                           <TextField fx:id="textInput" layoutX="30.0" layoutY="2.0" prefHeight="26.0" prefWidth="226.0" promptText="search" styleClass="text_input" />
                         </children>
                      </AnchorPane>
                   </children>
