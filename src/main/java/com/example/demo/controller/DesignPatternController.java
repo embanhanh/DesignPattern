@@ -15,11 +15,10 @@ import javafx.stage.DirectoryChooser;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.*;
 
 import java.io.File;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Objects;
 
 public class DesignPatternController {
@@ -144,31 +143,63 @@ public class DesignPatternController {
         String userHome = System.getProperty("user.home");
         File downloadsDirectory = new File(userHome, "Downloads");
         String path = tabCode.equals("Java") ? getNameJavaDemo(labelPattern.getText()) : getNamePythonDemo(labelPattern.getText());
-        if (downloadsDirectory.exists()) {
-            File sourceDirectory = new File(Objects.requireNonNull(getClass().getResource("/Demo/"+ tabCode + "/" + path)).getFile()); // Thư mục trong dự án
-            File destinationDirectory = new File(downloadsDirectory, sourceDirectory.getName()); // Thư mục đích
 
-            copyDirectory(sourceDirectory.toPath(), destinationDirectory.toPath());
-            System.out.println("Thư mục đã được tải về: " + destinationDirectory.getAbsolutePath());
+        if (downloadsDirectory.exists()) {
+            File sourceDirectory = new File(Objects.requireNonNull(getClass().getResource("/Demo/" + tabCode + "/" + path)).getFile());
+            File destinationDirectory = new File(downloadsDirectory, sourceDirectory.getName());
+
+            // Thêm số đếm vào tên thư mục nếu nó đã tồn tại
+            destinationDirectory = resolveDestinationDirectory(destinationDirectory);
+
+            try {
+                copyDirectory(sourceDirectory.toPath(), destinationDirectory.toPath());
+                System.out.println("Thư mục đã được tải về: " + destinationDirectory.getAbsolutePath());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         } else {
             System.out.println("Thư mục Downloads không tồn tại.");
         }
     }
 
-    private void copyDirectory(Path source, Path target) {
-        try {
-            Files.walk(source).forEach(sourcePath -> {
-                Path targetPath = target.resolve(source.relativize(sourcePath));
-                try {
-                    Files.copy(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            });
-        } catch (IOException e) {
-            e.printStackTrace();
+    private File resolveDestinationDirectory(File destinationDirectory) {
+        int count = 1;
+        File newDestinationDirectory = destinationDirectory;
+
+        while (newDestinationDirectory.exists()) {
+            String newName = count == 1 ? destinationDirectory.getName() : destinationDirectory.getName() + " (" + count + ")";
+            newDestinationDirectory = new File(destinationDirectory.getParent(), newName);
+            count++;
         }
+
+        return newDestinationDirectory;
     }
+
+
+
+    private void copyDirectory(Path source, Path target) throws IOException {
+        Files.walkFileTree(source, new SimpleFileVisitor<>() {
+            @Override
+            public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
+                Path targetDir = target.resolve(source.relativize(dir));
+                try {
+                    Files.copy(dir, targetDir, StandardCopyOption.REPLACE_EXISTING);
+                } catch (FileAlreadyExistsException e) {
+                    if (!Files.isDirectory(targetDir)) {
+                        throw e;
+                    }
+                }
+                return FileVisitResult.CONTINUE;
+            }
+
+            @Override
+            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                Files.copy(file, target.resolve(source.relativize(file)), StandardCopyOption.REPLACE_EXISTING);
+                return FileVisitResult.CONTINUE;
+            }
+        });
+    }
+
     private String getNameJavaDemo(String pattern) {
         return switch (pattern) {
             case "Factory Method" -> "Creational/factory_method";

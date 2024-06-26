@@ -72,6 +72,26 @@ public class SideBarController {
         selectedBtn.getStyleClass().add("selected-pane");
     }
 
+    public void handleButtonClick_Home(MouseEvent event) {
+        System.out.println("Clicked Home");
+        AnchorPane clickedButton = (AnchorPane) event.getSource();
+        selectedBtn.getStyleClass().removeAll("selected-pane");
+        selectedBtn.getStyleClass().add("default-pane");
+        try {
+//            AnchorPane additionalView = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/UI/ContentOfSection/StructuralPattern.fxml")));
+//            MainContainer.getChildren().removeLast();
+//            MainContainer.getChildren().add(additionalView);
+            Parent newContent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/UI/Home.fxml")));
+            MainContainer.getChildren().removeLast();
+            MainContainer.getChildren().add(newContent);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        selectedBtn = clickedButton;
+        selectedBtn.getStyleClass().removeAll("default-pane");
+        selectedBtn.getStyleClass().add("selected-pane");
+    }
+
     public void handleButtonClick_CreationalPattern(MouseEvent event) {
         System.out.println("Clicked creational pattern");
         AnchorPane clickedButton = (AnchorPane) event.getSource();
